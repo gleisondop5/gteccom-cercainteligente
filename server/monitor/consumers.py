@@ -51,36 +51,19 @@ class monitorConsumer(AsyncWebsocketConsumer):
                 camera_running = int(self.params.get('camera_running', ('0'))[0])
                 agents[self.name] = camera_running
                 logger.info(f'=====> agents: {agents}')
-                await self.channel_layer.group_send(self.room_group_name, {
+                await self.channel_layer.group_send("monitor", {
                     'type': 'send_message',
                     "event": "agent-connect",
                     'who': self.name, 
                     'camera_running': camera_running
                 })
-                '''
-                mensagem = json.dumps({'type': 'agent-connect', 'who': self.name, 'camera_running': camera_running})
-                #logger.info(f'=====> Mensagem_agent: {mensagem}')
-                await self.channel_layer.group_send(
-                    "monitores", {'message': mensagem}
-                )
-                '''
-
+                
             elif self.group == 'monitor':
                 await self.channel_layer.group_send(self.room_group_name, {
                     'type': 'send_message',
                     "event": "inventory",
                     'agents': list(agents.items())
                 })
-                
-
-                '''
-                await self.send(json.dumps({'event': 'inventory', 'agents': list(agents.items())}))                
-                
-                for i in range (1000):
-                    await self.send(json.dumps({'message': randint(-20, 20)}))
-                    await sleep(1)
-
-                '''   
 
         else:
             await self.close()
@@ -122,9 +105,7 @@ class monitorConsumer(AsyncWebsocketConsumer):
         
         
     async def send_message(self, msg):
-        """ Receive message from room group """
         logger.info(f'=====> Msg enviada: {msg}') 
-        # Send message to WebSocket
         await self.send(text_data=json.dumps({
             "payload": msg
         }))
