@@ -1,0 +1,55 @@
+{% load static %}
+{% load l10n %}
+<!DOCTYPE html>
+<html lang='pt'>
+<title>Cerca Inteligente | Munic&iacute;pio de Volta Redonda | Painel </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Cerca Inteligente | Munic&iacute;pio de Volta Redonda | Painel">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #FFFFFF;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+#map-canvas {overflow: hidden; position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 100%; height: 100%}
+</style>
+<body class="w3-light-blue w3-small">
+    <table>
+    {% for camera in camera_list %}
+        <tr>
+            <td>
+                <div>
+                    <img src='../../../camera/{{ camera.tag_slug }}/stream/open/{{ monitor_id }}'>
+                </div>
+            </td>
+            <td>
+                <div><b>{{ controlpoint.name }}</b><br>{{ controlpoint.address }}</div>
+                <div>
+                    <p>Latitude: {{ controlpoint.latitude }}<br>Longitude: {{ controlpoint.longitude }}</p>
+                    <p>{{ camera.direction_verbose }}</p>
+                </div>
+            </td>
+        </tr>
+    {% endfor %}
+    </table>
+</body>
+
+<script type="text/javascript">
+    setInterval(function() {
+        var xhr
+        {% for camera in camera_list %}
+        xhr = new XMLHttpRequest();
+        xhr.open("GET", "../../../camera/{{ camera.tag_slug }}/stream/keep-alive/{{ monitor_id }}", true);
+        xhr.send();
+        {% endfor %}
+    }, 2000)
+</script>
+
+</html>

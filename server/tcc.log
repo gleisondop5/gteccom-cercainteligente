@@ -1,0 +1,455 @@
+2021-04-27 00:52:57,986---INFO---server.py---HTTP/2 support enabled
+2021-04-27 00:52:57,987---INFO---server.py---Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2021-04-27 00:52:57,987---INFO---server.py---Listening on TCP address 127.0.0.1:8000
+2021-04-27 00:52:59,647---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56822]
+2021-04-27 00:52:59,673---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56822]
+2021-04-27 00:52:59,673---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56822]
+2021-04-27 00:52:59,674---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56822]
+2021-04-27 00:52:59,674---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/03a9f1c4-7b7a-400b-83d5-0c494d3f2867 200 [0.03, 127.0.0.1:56822][0m
+2021-04-27 00:53:01,646---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56822]
+2021-04-27 00:53:01,662---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56822]
+2021-04-27 00:53:01,663---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56822]
+2021-04-27 00:53:01,664---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56822]
+2021-04-27 00:53:01,664---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/03a9f1c4-7b7a-400b-83d5-0c494d3f2867 200 [0.02, 127.0.0.1:56822][0m
+2021-04-27 00:53:03,646---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56822]
+2021-04-27 00:53:03,663---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56822]
+2021-04-27 00:53:03,663---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56822]
+2021-04-27 00:53:03,664---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56822]
+2021-04-27 00:53:03,664---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/03a9f1c4-7b7a-400b-83d5-0c494d3f2867 200 [0.02, 127.0.0.1:56822][0m
+2021-04-27 00:53:13,284---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56822]
+2021-04-27 00:53:13,350---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56822]
+2021-04-27 00:53:13,351---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56822]
+2021-04-27 00:53:13,351---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56822]
+2021-04-27 00:53:13,351---INFO---runserver.py---[mHTTP GET /monitor/ 200 [0.07, 127.0.0.1:56822][0m
+2021-04-27 00:53:13,477---INFO---runserver.py---WebSocket HANDSHAKING /monitor/ [127.0.0.1:56826]
+2021-04-27 00:53:13,478---DEBUG---http_protocol.py---Upgraded connection ['127.0.0.1', 56826] to WebSocket
+2021-04-27 00:53:13,530---DEBUG---ws_protocol.py---WebSocket ['127.0.0.1', 56826] open and established
+2021-04-27 00:53:13,531---INFO---runserver.py---WebSocket CONNECT /monitor/ [127.0.0.1:56826]
+2021-04-27 00:53:13,531---DEBUG---ws_protocol.py---WebSocket ['127.0.0.1', 56826] accepted by application
+2021-04-27 00:53:13,532---DEBUG---connection.py---Creating tcp connection to ('127.0.0.1', 6379)
+2021-04-27 00:53:16,187---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56822]
+2021-04-27 00:53:16,190---DEBUG---http_protocol.py---HTTP 301 response started for ['127.0.0.1', 56822]
+2021-04-27 00:53:16,192---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56822]
+2021-04-27 00:53:16,192---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56822]
+2021-04-27 00:53:16,192---INFO---runserver.py---[32mHTTP GET /monitor/rtsp-panel/2/8daf53c5-4594-41d5-ab05-1fdcf7444b74 301 [0.01, 127.0.0.1:56822][0m
+2021-04-27 00:53:16,199---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56822]
+2021-04-27 00:53:16,226---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56822]
+2021-04-27 00:53:16,227---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56822]
+2021-04-27 00:53:16,227---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56822]
+2021-04-27 00:53:16,227---INFO---runserver.py---[mHTTP GET /monitor/rtsp-panel/2/8daf53c5-4594-41d5-ab05-1fdcf7444b74/ 200 [0.03, 127.0.0.1:56822][0m
+2021-04-27 00:53:16,265---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56822]
+2021-04-27 00:53:16,268---INFO---views.py---=====> iniciou o pedido
+2021-04-27 00:53:18,295---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:53:18,312---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:53:18,313---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:53:18,314---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:53:18,314---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:53:20,294---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:53:20,312---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:53:20,313---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:53:20,314---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:53:20,314---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:53:22,295---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:53:22,312---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:53:22,313---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:53:22,314---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:53:22,314---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:53:24,294---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:53:24,311---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:53:24,312---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:53:24,312---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:53:24,313---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:53:26,294---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:53:26,311---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:53:26,312---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:53:26,313---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:53:26,313---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:53:28,294---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:53:28,310---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:53:28,310---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:53:28,311---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:53:28,312---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:53:30,295---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:53:30,312---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:53:30,313---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:53:30,314---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:53:30,314---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:53:32,294---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:53:32,312---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:53:32,312---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:53:32,313---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:53:32,313---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:53:34,294---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:53:34,310---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:53:34,311---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:53:34,312---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:53:34,313---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:53:36,294---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:53:36,310---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:53:36,311---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:53:36,312---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:53:36,312---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:53:38,294---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:53:38,310---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:53:38,311---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:53:38,311---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:53:38,312---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:53:40,294---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:53:40,311---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:53:40,312---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:53:40,313---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:53:40,313---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:53:42,293---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:53:42,310---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:53:42,311---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:53:42,311---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:53:42,312---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:53:44,296---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:53:44,313---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:53:44,314---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:53:44,314---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:53:44,315---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:53:46,290---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:53:46,295---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:53:46,296---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:53:46,296---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:53:46,296---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.01, 127.0.0.1:56840][0m
+2021-04-27 00:53:48,295---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:53:48,309---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:53:48,309---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:53:48,310---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:53:48,310---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.01, 127.0.0.1:56840][0m
+2021-04-27 00:53:50,298---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:53:50,314---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:53:50,315---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:53:50,316---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:53:50,316---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:53:52,292---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:53:52,300---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:53:52,300---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:53:52,300---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:53:52,301---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.01, 127.0.0.1:56840][0m
+2021-04-27 00:53:54,295---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:53:54,313---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:53:54,314---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:53:54,315---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:53:54,315---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:53:56,294---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:53:56,312---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:53:56,313---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:53:56,313---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:53:56,314---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:53:58,294---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:53:58,311---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:53:58,312---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:53:58,313---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:53:58,313---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:54:00,294---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:54:00,310---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:54:00,311---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:54:00,312---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:54:00,312---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:54:02,294---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:54:02,347---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:54:02,348---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:54:02,349---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:54:02,349---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.06, 127.0.0.1:56840][0m
+2021-04-27 00:54:04,290---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:54:04,294---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:54:04,294---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:54:04,294---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:54:04,294---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.00, 127.0.0.1:56840][0m
+2021-04-27 00:54:06,294---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:54:06,309---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:54:06,309---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:54:06,310---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:54:06,310---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:54:08,295---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:54:08,312---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:54:08,313---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:54:08,315---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:54:08,316---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:54:10,292---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:54:10,305---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:54:10,306---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:54:10,307---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:54:10,307---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:54:12,292---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:54:12,305---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:54:12,306---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:54:12,306---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:54:12,307---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.01, 127.0.0.1:56840][0m
+2021-04-27 00:54:14,295---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:54:14,313---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:54:14,315---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:54:14,316---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:54:14,316---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:54:16,294---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:54:16,314---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:54:16,315---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:54:16,316---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:54:16,316---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:54:18,294---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:54:18,312---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:54:18,313---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:54:18,314---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:54:18,314---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:54:20,294---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:54:20,348---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:54:20,349---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:54:20,351---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:54:20,351---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.06, 127.0.0.1:56840][0m
+2021-04-27 00:54:22,295---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:54:22,323---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:54:22,324---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:54:22,325---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:54:22,326---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.03, 127.0.0.1:56840][0m
+2021-04-27 00:54:24,295---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:54:24,315---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:54:24,316---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:54:24,317---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:54:24,317---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:54:26,295---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:54:26,315---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:54:26,316---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:54:26,316---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:54:26,317---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:54:28,295---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:54:28,313---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:54:28,314---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:54:28,315---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:54:28,315---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:54:30,297---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:54:30,315---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:54:30,315---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:54:30,316---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:54:30,316---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:54:32,296---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:54:32,318---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:54:32,319---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:54:32,320---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:54:32,321---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.03, 127.0.0.1:56840][0m
+2021-04-27 00:54:34,295---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:54:34,313---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:54:34,314---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:54:34,315---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:54:34,315---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:54:36,293---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:54:36,306---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:54:36,307---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:54:36,307---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:54:36,308---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.01, 127.0.0.1:56840][0m
+2021-04-27 00:54:38,292---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:54:38,300---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:54:38,300---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:54:38,300---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:54:38,300---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.01, 127.0.0.1:56840][0m
+2021-04-27 00:54:40,295---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:54:40,313---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:54:40,315---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:54:40,315---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:54:40,316---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:54:42,296---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:54:42,318---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:54:42,319---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:54:42,320---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:54:42,321---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.03, 127.0.0.1:56840][0m
+2021-04-27 00:54:44,294---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:54:44,308---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:54:44,309---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:54:44,310---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:54:44,310---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:54:46,294---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:54:46,309---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:54:46,310---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:54:46,310---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:54:46,311---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:54:48,295---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:54:48,313---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:54:48,314---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:54:48,314---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:54:48,314---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:54:50,291---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:54:50,297---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:54:50,297---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:54:50,297---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:54:50,297---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.01, 127.0.0.1:56840][0m
+2021-04-27 00:54:52,295---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:54:52,316---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:54:52,317---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:54:52,318---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:54:52,319---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:54:54,292---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:54:54,299---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:54:54,300---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:54:54,300---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:54:54,300---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.01, 127.0.0.1:56840][0m
+2021-04-27 00:54:56,292---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:54:56,299---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:54:56,299---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:54:56,299---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:54:56,299---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.01, 127.0.0.1:56840][0m
+2021-04-27 00:54:58,294---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:54:58,311---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:54:58,312---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:54:58,313---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:54:58,313---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:55:00,291---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:55:00,300---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:55:00,300---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:55:00,301---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:55:00,301---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.01, 127.0.0.1:56840][0m
+2021-04-27 00:55:02,291---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:55:02,298---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:55:02,299---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:55:02,299---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:55:02,299---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.01, 127.0.0.1:56840][0m
+2021-04-27 00:55:04,293---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:55:04,310---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:55:04,312---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:55:04,313---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:55:04,313---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:55:06,291---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:55:06,300---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:55:06,300---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:55:06,301---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:55:06,301---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.01, 127.0.0.1:56840][0m
+2021-04-27 00:55:08,295---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:55:08,310---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:55:08,311---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:55:08,311---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:55:08,312---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:55:10,295---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:55:10,317---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:55:10,318---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:55:10,319---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:55:10,319---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:55:12,295---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:55:12,317---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:55:12,319---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:55:12,319---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:55:12,320---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:55:14,295---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:55:14,314---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:55:14,316---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:55:14,316---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:55:14,317---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:55:16,295---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:55:16,313---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:55:16,315---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:55:16,316---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:55:16,316---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:55:18,294---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:55:18,312---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:55:18,313---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:55:18,313---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:55:18,314---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:55:20,294---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:55:20,310---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:55:20,311---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:55:20,312---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:55:20,312---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:55:22,296---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:55:22,313---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:55:22,314---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:55:22,314---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:55:22,315---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:55:24,295---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:55:24,310---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:55:24,311---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:55:24,311---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:55:24,311---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:55:26,295---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:55:26,313---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:55:26,314---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:55:26,314---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:55:26,315---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:55:28,295---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:55:28,312---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:55:28,313---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:55:28,313---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:55:28,313---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:55:30,296---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:55:30,312---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:55:30,313---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:55:30,313---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:55:30,313---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:55:31,571---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:55:31,691---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:55:31,691---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:55:31,692---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:55:31,692---INFO---runserver.py---[mHTTP GET /admin/monitor/camera/14/change/ 200 [0.12, 127.0.0.1:56840][0m
+2021-04-27 00:55:31,720---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:55:31,744---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:55:31,745---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:55:31,745---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:55:31,745---INFO---runserver.py---[mHTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:56840][0m
+2021-04-27 00:55:32,295---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:55:32,310---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:55:32,311---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:55:32,311---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:55:32,311---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:55:34,294---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:55:34,309---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:55:34,310---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:55:34,311---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:55:34,311---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:55:34,843---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:55:34,995---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:55:34,996---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:55:34,996---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:55:34,996---INFO---runserver.py---[mHTTP GET /admin/monitor/camera/ 200 [0.15, 127.0.0.1:56840][0m
+2021-04-27 00:55:35,020---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:55:35,042---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:55:35,042---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:55:35,042---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:55:35,042---INFO---runserver.py---[mHTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:55:36,295---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:55:36,311---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:55:36,312---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:55:36,312---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:55:36,313---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:55:36,568---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:55:36,677---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:55:36,677---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:55:36,677---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:55:36,677---INFO---runserver.py---[mHTTP GET /admin/monitor/camera/14/change/ 200 [0.11, 127.0.0.1:56840][0m
+2021-04-27 00:55:36,698---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:55:36,719---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:55:36,720---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:55:36,720---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:55:36,720---INFO---runserver.py---[mHTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:55:38,295---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:55:38,313---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:55:38,313---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:55:38,314---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:55:38,314---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:55:40,294---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:55:40,309---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:55:40,310---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:55:40,311---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:55:40,311---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:55:42,294---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:55:42,307---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:55:42,308---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:55:42,309---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:55:42,309---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:55:43,012---DEBUG---ws_protocol.py---WebSocket closed for ['127.0.0.1', 56826]
+2021-04-27 00:55:43,012---INFO---runserver.py---WebSocket DISCONNECT /monitor/ [127.0.0.1:56826]
+2021-04-27 00:55:43,013---DEBUG---connection.py---Cancelling waiter (<Future cancelled>, [None, None])
+2021-04-27 00:55:43,013---DEBUG---util.py---Waiter future is already done <Future cancelled>
+2021-04-27 00:55:44,294---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:55:44,311---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:55:44,312---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:55:44,312---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:55:44,313---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.02, 127.0.0.1:56840][0m
+2021-04-27 00:55:46,292---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:55:46,303---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:55:46,303---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:55:46,304---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:55:46,304---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.01, 127.0.0.1:56840][0m
+2021-04-27 00:55:48,296---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 56840]
+2021-04-27 00:55:48,320---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 56840]
+2021-04-27 00:55:48,321---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 56840]
+2021-04-27 00:55:48,321---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 56840]
+2021-04-27 00:55:48,322---INFO---runserver.py---[mHTTP GET /monitor/camera/celular-cam1/stream/keep-alive/8daf53c5-4594-41d5-ab05-1fdcf7444b74 200 [0.03, 127.0.0.1:56840][0m
