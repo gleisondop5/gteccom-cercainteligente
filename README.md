@@ -1,0 +1,1 @@
+# gteccom-cercainteligente
