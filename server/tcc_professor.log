@@ -1,0 +1,74 @@
+2021-04-29 12:51:06,467---INFO---server.py---HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2021-04-29 12:51:06,467---INFO---server.py---Using busy-loop synchronous mode on channel layer
+2021-04-29 12:51:06,467---INFO---server.py---Listening on endpoint tcp:port=8000:interface=127.0.0.1
+2021-04-29 12:56:18,663---WARNING---base.py---Not Found: /
+2021-04-29 12:56:18,791---WARNING---base.py---Not Found: /favicon.ico
+2021-04-29 12:56:22,306---INFO---consumers.py---=====> params (27) {'group': ['monitor'], 'name': ['fbf6e99a-3290-44e4-9bac-4cf76c5d1b80']}
+2021-04-29 12:56:22,306---INFO---consumers.py---=====> group (30) monitor
+2021-04-29 12:56:22,306---INFO---consumers.py---=====> name (33) fbf6e99a-3290-44e4-9bac-4cf76c5d1b80
+2021-04-29 12:56:22,306---INFO---consumers.py---=====> msg.channel_session (39) <django.contrib.sessions.backends.db.SessionStore object at 0x7f824807ebb0>
+2021-04-29 12:56:22,307---INFO---consumers.py---=====> monitor agent.itens ws_connect (53) dict_items([])
+2021-04-29 12:56:45,926---INFO---consumers.py---=====> name disconect (84) <channels.message.Message object at 0x7f826ce972b0>
+2021-04-29 12:56:46,019---INFO---consumers.py---=====> params (27) {'group': ['monitor'], 'name': ['e368da2c-b856-4a5f-a7ce-d65b7cf91610']}
+2021-04-29 12:56:46,019---INFO---consumers.py---=====> group (30) monitor
+2021-04-29 12:56:46,019---INFO---consumers.py---=====> name (33) e368da2c-b856-4a5f-a7ce-d65b7cf91610
+2021-04-29 12:56:46,019---INFO---consumers.py---=====> msg.channel_session (39) <django.contrib.sessions.backends.db.SessionStore object at 0x7f82480036a0>
+2021-04-29 12:56:46,020---INFO---consumers.py---=====> monitor agent.itens ws_connect (53) dict_items([])
+2021-04-29 12:59:03,722---INFO---server.py---HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2021-04-29 12:59:03,722---INFO---server.py---Using busy-loop synchronous mode on channel layer
+2021-04-29 12:59:03,722---INFO---server.py---Listening on endpoint tcp:port=8000:interface=127.0.0.1
+2021-04-29 12:59:08,443---INFO---server.py---HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2021-04-29 12:59:08,443---INFO---server.py---Using busy-loop synchronous mode on channel layer
+2021-04-29 12:59:08,443---INFO---server.py---Listening on endpoint tcp:port=8000:interface=127.0.0.1
+2021-04-29 12:59:13,115---INFO---server.py---HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2021-04-29 12:59:13,116---INFO---server.py---Using busy-loop synchronous mode on channel layer
+2021-04-29 12:59:13,116---INFO---server.py---Listening on endpoint tcp:port=8000:interface=127.0.0.1
+2021-04-29 12:59:17,779---INFO---server.py---HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2021-04-29 12:59:17,779---INFO---server.py---Using busy-loop synchronous mode on channel layer
+2021-04-29 12:59:17,779---INFO---server.py---Listening on endpoint tcp:port=8000:interface=127.0.0.1
+2021-04-29 12:59:42,847---INFO---server.py---HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2021-04-29 12:59:42,847---INFO---server.py---Using busy-loop synchronous mode on channel layer
+2021-04-29 12:59:42,847---INFO---server.py---Listening on endpoint tcp:port=8000:interface=127.0.0.1
+2021-04-29 12:59:48,513---INFO---server.py---HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2021-04-29 12:59:48,514---INFO---server.py---Using busy-loop synchronous mode on channel layer
+2021-04-29 12:59:48,514---INFO---server.py---Listening on endpoint tcp:port=8000:interface=127.0.0.1
+2021-04-29 12:59:52,155---INFO---server.py---HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2021-04-29 12:59:52,155---INFO---server.py---Using busy-loop synchronous mode on channel layer
+2021-04-29 12:59:52,155---INFO---server.py---Listening on endpoint tcp:port=8000:interface=127.0.0.1
+2021-04-29 12:59:58,888---INFO---server.py---HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2021-04-29 12:59:58,889---INFO---server.py---Using busy-loop synchronous mode on channel layer
+2021-04-29 12:59:58,889---INFO---server.py---Listening on endpoint tcp:port=8000:interface=127.0.0.1
+2021-04-29 13:00:11,771---INFO---server.py---HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2021-04-29 13:00:11,771---INFO---server.py---Using busy-loop synchronous mode on channel layer
+2021-04-29 13:00:11,771---INFO---server.py---Listening on endpoint tcp:port=8000:interface=127.0.0.1
+2021-04-29 13:00:18,434---INFO---server.py---HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2021-04-29 13:00:18,434---INFO---server.py---Using busy-loop synchronous mode on channel layer
+2021-04-29 13:00:18,434---INFO---server.py---Listening on endpoint tcp:port=8000:interface=127.0.0.1
+2021-04-29 13:00:32,303---INFO---server.py---HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2021-04-29 13:00:32,304---INFO---server.py---Using busy-loop synchronous mode on channel layer
+2021-04-29 13:00:32,304---INFO---server.py---Listening on endpoint tcp:port=8000:interface=127.0.0.1
+2021-04-29 13:00:38,091---INFO---server.py---HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2021-04-29 13:00:38,091---INFO---server.py---Using busy-loop synchronous mode on channel layer
+2021-04-29 13:00:38,091---INFO---server.py---Listening on endpoint tcp:port=8000:interface=127.0.0.1
+2021-04-29 13:00:43,810---INFO---server.py---HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2021-04-29 13:00:43,810---INFO---server.py---Using busy-loop synchronous mode on channel layer
+2021-04-29 13:00:43,810---INFO---server.py---Listening on endpoint tcp:port=8000:interface=127.0.0.1
+2021-04-29 13:00:46,464---INFO---server.py---HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2021-04-29 13:00:46,464---INFO---server.py---Using busy-loop synchronous mode on channel layer
+2021-04-29 13:00:46,464---INFO---server.py---Listening on endpoint tcp:port=8000:interface=127.0.0.1
+2021-04-29 13:01:23,508---INFO---consumers.py---=====> msg (26) <channels.message.Message object at 0x7f30edae9700>
+2021-04-29 13:01:23,508---INFO---consumers.py---=====> params (27) {'group': ['monitor'], 'name': ['ef4d4627-247b-44ca-bf93-1a6e137ff256']}
+2021-04-29 13:01:23,508---INFO---consumers.py---=====> group (30) monitor
+2021-04-29 13:01:23,508---INFO---consumers.py---=====> name (33) ef4d4627-247b-44ca-bf93-1a6e137ff256
+2021-04-29 13:01:23,508---INFO---consumers.py---=====> msg.replay_channel (36) daphne.response.SpkLjtLWHy!sEQzqHcEWR
+2021-04-29 13:01:23,508---INFO---consumers.py---=====> msg.channel_session (39) <django.contrib.sessions.backends.db.SessionStore object at 0x7f30edae97c0>
+2021-04-29 13:01:23,509---INFO---consumers.py---=====> group (45) monitor
+2021-04-29 13:01:23,509---INFO---consumers.py---=====> monitor agent.itens ws_connect (53) dict_items([])
+2021-04-29 13:02:00,964---INFO---consumers.py---=====> msg (26) <channels.message.Message object at 0x7f30edaec190>
+2021-04-29 13:02:00,964---INFO---consumers.py---=====> params (27) {'group': ['agent'], 'name': ['celular-cam3'], 'camera_running': ['0']}
+2021-04-29 13:02:00,964---INFO---consumers.py---=====> group (30) agent
+2021-04-29 13:02:00,964---INFO---consumers.py---=====> name (33) celular-cam3
+2021-04-29 13:02:00,964---INFO---consumers.py---=====> msg.replay_channel (36) daphne.response.SpkLjtLWHy!hZVNRGJpnQ
+2021-04-29 13:02:00,964---INFO---consumers.py---=====> msg.channel_session (39) <django.contrib.sessions.backends.db.SessionStore object at 0x7f30edaec2e0>
+2021-04-29 13:02:00,964---INFO---consumers.py---=====> group (45) agent
+2021-04-29 13:02:00,965---INFO---consumers.py---=====> camera running (45) 0

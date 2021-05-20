@@ -1,101 +1,413 @@
 {% load static %}
 {% load l10n %}
 <!DOCTYPE html>
-<html lang='pt'>
-<title>Cerca Inteligente | Munic&iacute;pio de Volta Redonda</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Cerca Inteligente | Munic&iacute;pio de Volta Redonda">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-.w3-row-padding img {margin-bottom: 12px}
-/* Set the width of the sidebar to 120px */
-.w3-sidebar {width: 120px;background: #FFFFFF;}
-/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-#main {margin-left: 120px}
-/* Remove margins from "page content" on small screens */
-@media only screen and (max-width: 600px) {#main {margin-left: 0}}
-#map-canvas {overflow: hidden; position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 100%; height: 100%}
-</style>
-<script type="text/javascript">
-    const STATUS_AGENT_OFF = 0;
-    const STATUS_AGENT_ON_CAMERA_OFF = 1;
-    const STATUS_AGENT_ON_CAMERA_ON = 2;
-    const STATUS_UNKNOWN = 3;
+<html lang="pt-br">
+
+  <head>
+    <title>Cerca Inteligente | Munic&iacute;pio de Volta Redonda</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Cerca Inteligente | Munic&iacute;pio de Volta Redonda">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+      body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+      .w3-row-padding img {margin-bottom: 12px}
+      /* Set the width of the sidebar to 120px */
+      .w3-sidebar {width: 120px;background: #FFFFFF;}
+      /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+      #main {margin-left: 120px}
+      /* Remove margins from "page content" on small screens */
+      @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+      #map-canvas {overflow: hidden; position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 100%; height: 100%}
+    </style>
+
+    <script>
+        const STATUS_AGENT_OFF = 0;
+        const STATUS_AGENT_ON_CAMERA_OFF = 1;
+        const STATUS_AGENT_ON_CAMERA_ON = 2;
+        const STATUS_UNKNOWN = 3;
+        
+        const ICONS = {
+            status: [
+                {icon: "{% static "images/icons/camera-red.png" %}"},
+                {icon: "{% static "images/icons/camera-yellow.png" %}"},
+                {icon: "{% static "images/icons/camera-green.png" %}"},
+                {icon: "{% static "images/icons/camera-white.png" %}"},
+            ]
+        };
+        
+        //pega o layer
+        var layers = new Map();
+        {% for layer in layer_list %}
+          layers.set({{ layer.id }}, {
+              name: "{{ layer.name }}",
+              controlpoints: []
+          });
+        {% endfor %}
+
+        //peaga os pontos de controles
+        var controlpoints = new Map();
+        {% for controlpoint in controlpoint_list %}
+          controlpoints.set({{ controlpoint.id }}, {
+              id: "{{ controlpoint.id }}",
+              name: "{{ controlpoint.name }}",
+              address: "{{ controlpoint.address }}",
+              latitude: {{ controlpoint.latitude|unlocalize }},
+              longitude: {{ controlpoint.longitude|unlocalize }},
+              layer: layers.get({{ controlpoint.layer.id }}),
+              cameras: [],
+              marker: undefined
+          });
+          layers.get({{ controlpoint.layer.id }}).controlpoints.push(controlpoints.get({{ controlpoint.id }}));
+        {% endfor %}
+        
+        //pega as cameras
+        var cameras = new Map();        
+        {% for camera in camera_list %}
+          cameras.set("{{ camera.tag_slug }}", {
+              tag_slug: "{{ camera.tag_slug }}",
+              direction: "{{ camera.direction_verbose }}",
+              rtsp_url: "{{ camera.rtsp_url }}",
+              status: STATUS_AGENT_OFF,
+              controlpoint: controlpoints.get({{ camera.controlpoint.id }})
+          });
+          controlpoints.get({{ camera.controlpoint.id }}).cameras.push(cameras.get("{{ camera.tag_slug }}"));
+        {% endfor %}
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{% static 'js/utils.js' %}"></script>
+    <script src="{% static 'js/map.js' %}"></script>
+
+    <script >
+
+        var map;
+        var bounds;
+        //constroi um id
+        var id = makeUUID(); 
+        
+
+        let monitorSocket = new WebSocket(
+            'ws://'
+            + window.location.host
+            + '/monitor/?group=monitor&name='
+            + id
+            + '/'
+        );
+
+
+           
+        /*
+        monitorSocket.onopen = function(event) {
+            // handle open event
+            //if (monitorSocket.readyState == WebSocket.OPEN) {socket.onopen();}
+            console.log(monitorSocket.readyState)
+            //window.addEventListener("load", init, false);
+            monitorSocket.send("Acorda cacete")
+
+        };
+        */
+
+
+        //monitorSocket.onopen();
+        
+
+        console.log('iniciou')
+
+        //inicia um agente
+        function startAgent(tag_slug) {
+            console.log("start")
+            var camera = cameras.get(tag_slug);
+            if (camera != undefined) {
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", "agent/" + tag_slug + "/start/", true);
+                xhr.send();
+            }
+        }
+
+        //para um agente
+        function stopAgent(tag_slug) {
+            console.log("stop")
+            var camera = cameras.get(tag_slug);
+            if (camera != undefined) {
+                var answer = confirm("Voc\xEA deseja desativar o agente da c\xE2mera " + (camera.controlpoint.cameras.indexOf(camera) + 1) + " do ponto de controle '" + camera.controlpoint.name + "'?");
+                if (answer) {
+                    var xhr = new XMLHttpRequest();
+                    xhr.open("GET", "agent/" + tag_slug + "/stop/", true);
+                    xhr.send();
+                }
+            }
+        }
+
+        //mostra a taxa de processamento
+        function askAgentProcessinRate(tag_slug) {
+            console.log("askAgent_ProcessinRate")
+            var camera = cameras.get(tag_slug);
+            if (camera != undefined) {
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", "agent/" + tag_slug + "/ask-processing-rate/" + id, true);
+                xhr.send();
+            }
+        }
+
+        //abre a janela de stream da camera
+        function openRTSPWindow(controlpoint_id) {
+            console.log("openRTSPWindow")
+            window.open("rtsp-panel/" + controlpoint_id + "/" + id, "rtsp-panel", "toolbar=0,fullscreen=0,menubar=0,location=0");
+        }
+
+        //cria a caixa de informação do ponto de controle
+        function controlpointInfoContent(controlpoint) {
+            //console.log("controlpointInfoContent")    
+            var content = "<div>" +
+                "<div><b>" + controlpoint.name + "</b><br>" + controlpoint.address + "</div>" +
+                "<div>" +
+                "<p>Latitude: " + controlpoint.latitude + "<br>Longitude: " + controlpoint.longitude + "</p>" +
+                "<p><i>Agente(s)</i>";
+
+            if (controlpoint.cameras.length != 0) {
+                $.each(controlpoint.cameras, function(index, camera) {
+                    content += "<br>&ensp;" + (index + 1) + ". " + camera.direction;
+                    content += " <img src='" + ICONS.status[camera.status].icon + "' width='16' height='16'>";
+                    switch (camera.status) {
+                        case STATUS_AGENT_ON_CAMERA_OFF:
+                        case STATUS_AGENT_ON_CAMERA_ON:
+                            content += " <a href=\"javascript:stopAgent('" + camera.tag_slug + "')\">desativar</a>";
+                            content += " (<a href=\"javascript:askAgentProcessinRate('" + camera.tag_slug + "')\">fps</a>)";
+                            break;
+                        case STATUS_AGENT_OFF:
+                            content += " <a href=\"javascript:startAgent('" + camera.tag_slug + "')\">ativar</a>";
+                            break;
+                    }
+                });
+                content += "</p><button onclick=\"openRTSPWindow(" + controlpoint.id + ")\">Abrir painel</button>";    
+            }
+            else {
+                content += "<br>Nenhum agente cadastrado</p>";
+            }
+
+            content += "</div></div>";    
+            
+            return content;
+        }
+
+        function verifica_conexao(){
+            if(monitorSocket.readyState == 0){
+                console.log('conectando')
+            }
+                
+        }
+        //altera o status da camera
+        function updateControlPoint(controlpoint) {
+            console.log("updateControlPoint")
+            var status = STATUS_UNKNOWN
+            $.each(controlpoint.cameras, function(_, camera) {
+                status = Math.min(status, camera.status);
+            });
+            controlpoint.marker.setIcon(ICONS.status[status].icon);
+            controlpoint.marker.info.setContent(controlpointInfoContent(controlpoint));
+        }
+
+        function sleep(milliseconds) {
+            const date = Date.now();
+            let currentDate = null;
+            do {
+                currentDate = Date.now();
+            } while (currentDate - date < milliseconds);
+        }
+
+        //inicializa o mapa
+        function initMap() {
+            console.log("initMap")
+            //cria o mapa
+            map = new google.maps.Map(document.getElementById("map-canvas"), {
+                center: new google.maps.LatLng(-22.5138892, -44.0937475),
+                zoom: 13,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                mapTypeControl: false,
+                streetViewControl: false
+            });
+            
+            bounds = new google.maps.LatLngBounds();
+            
+            //marca a area de interesse no mapa
+            $.getJSON("../static/data/city.json", function(data) {
+                $.each(data["city"].polygons, function(_, path) {
+                    var polygon = new google.maps.Polygon({
+                        paths: path,
+                        strokeColor: '#87CEEB',
+                        strokeOpacity: 1.00,
+                        strokeWeight: 1,
+                        fillColor: '#9BE2FF',
+                        fillOpacity: 0.20,
+                        map: map
+                    });
+                });
+            });
+            
+            //coloca os pontos de controle no mapa
+            for (var [_, controlpoint] of controlpoints) {
+                var marker = new google.maps.Marker({
+                    title: controlpoint.name,
+                    position: new google.maps.LatLng(controlpoint.latitude, controlpoint.longitude),
+                    icon: ICONS.status[controlpoint.cameras.length == 0 ? STATUS_UNKNOWN : STATUS_AGENT_OFF].icon,
+                    info: new google.maps.InfoWindow({content: controlpointInfoContent(controlpoint), maxWidth: 350}),
+                    map: map,
+                });
+                
+                marker.addListener("click", function() {
+                    this.info.open(map, this);
+                });
+                
+                controlpoint.marker = marker;
+                
+                bounds.extend(marker.position);
+            }
+            
+            //monta o map com as informações (junta tudo)
+            map.fitBounds(bounds);
+            
+            
+            /*
+            
+            if (monitorSocket.readyState==1){
+                console.log('enviou')
+                monitorSocket.send("Acorda cacete 2") 
+            }
+            
+            monitorSocket.onopen = function(event) {
+                // handle open event
+                //if (monitorSocket.readyState == WebSocket.OPEN) {socket.onopen();}
+                console.log(monitorSocket.readyState)
+                //window.addEventListener("load", init, false);
+                monitorSocket.send("Acorda cacete")
+
+            };
+            
+            */
+            
+            
+            
+            monitorSocket.onmessage = function(e) {
+                var data = JSON.parse(e.data);
+                console.log("data:")
+                console.log(data)
+
+                payload = data["payload"];
+                console.log("payload:")
+                console.log(payload)
+
+                let event = payload.event; 
+                console.log("event:") 
+                console.log(event)
+
+                switch (event) {
+                    case "agent-connect":
+                        console.log('case =  agent-connect')
+                        status = 'conectado'
+                    case "agent-update":
+                        console.log('case =  agent-update')
+                        var camera = cameras.get(payload.who); 
+                        if (camera != undefined) {
+                            if (payload.camera_running == 1) {
+                                camera.status = STATUS_AGENT_ON_CAMERA_ON;
+                            }
+                            else {
+                                camera.status = STATUS_AGENT_ON_CAMERA_OFF;
+                            }
+                            updateControlPoint(camera.controlpoint);
+                        } 
+                        break;
+                        
+                    case "agent-disconnect":
+                        console.log('case =  agent-disconnect')
+                        var camera = cameras.get(payload.who);
+                        if (camera != undefined) {
+                            camera.status = STATUS_AGENT_OFF;
+                            updateControlPoint(camera.controlpoint);
+                            alert("Conex\xE3o interrompida entre o monitor e o agente da c\xE2mera " + (camera.controlpoint.cameras.indexOf(camera) + 1)
+                                + " do ponto de controle '" + camera.controlpoint.name + "'.");
+                        } 
+                        break;
+                        
+                    case "agent-processing-rate":
+                        console.log('case =  agent-processing-rate')
+                        if (payload.target == id) {
+                            var camera = cameras.get(payload.who);
+                            if (camera != undefined) {
+                                alert("O agente da c\xE2mera " + (camera.controlpoint.cameras.indexOf(camera) + 1)
+                                    + " do ponto de controle '" + camera.controlpoint.name + "' reportou"
+                                    + " processamento a " + payload.processing_rate + " quadros por segundo.");
+                            }
+                        } 
+                        break;
+                        
+                    case "inventory":
+                        console.log('case = inventory')
+                        $.each(payload.agents, function(_, pair) {
+                            var camera = cameras.get(pair[0]); 
+                            if (camera != undefined) {
+                                if (pair[1]) {
+                                    camera.status = STATUS_AGENT_ON_CAMERA_ON;
+                                }
+                                else {
+                                    camera.status = STATUS_AGENT_ON_CAMERA_OFF;
+                                }
+                                updateControlPoint(camera.controlpoint);
+                            }
+                        })
+                        break;
+                }
+                
+
+            };
+            
+            
+            monitorSocket.onclose = function(event) {
+                alert("A conex\xE3o com o servidor foi interrompida.")
+            };
+        }
+
+
+
+
+    </script>
+
+  </head>
+
+  <body class="w3-light-blue">
+
+    <!-- Icon Bar (Sidebar - hidden on small screens) -->
+    <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+      <!-- Avatar image in top left corner -->
+      <img src="{% static 'images/vr-brasao.png' %}" style="width:100%">
+      <a href="javascript:map.fitBounds(bounds)" class="w3-bar-item w3-button w3-padding-large w3-light-blue">
+        <i class="fa fa-home w3-xxlarge"></i>
+        <p>HOME</p>
+      </a>
+
+      <a href="test">test</a>
+    </nav>
+
+    <!-- Navbar on small screens (Hidden on medium and large screens) -->
+    <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+      <div class="w3-bar w3-light-blue w3-opacity w3-hover-opacity-off w3-center w3-small">
+        <a href="javascript:map.fitBounds(bounds)" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+      </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="w3-padding-large" id="map-canvas"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkGYZPNefP8ERD-xS1y_2RTHPxn-rFSdE&callback=initMap"></script>
     
-    const ICONS = {
-        status: [
-            {icon: "{% static "images/icons/camera-red.png" %}"},
-            {icon: "{% static "images/icons/camera-yellow.png" %}"},
-            {icon: "{% static "images/icons/camera-green.png" %}"},
-            {icon: "{% static "images/icons/camera-white.png" %}"},
-        ]
-    };
     
-    var layers = new Map();
-    {% for layer in layer_list %}
-    layers.set({{ layer.id }}, {
-        name: "{{ layer.name }}",
-        controlpoints: []
-    });
-    {% endfor %}
-  
-    var controlpoints = new Map();
-    {% for controlpoint in controlpoint_list %}
-    controlpoints.set({{ controlpoint.id }}, {
-        id: "{{ controlpoint.id }}",
-        name: "{{ controlpoint.name }}",
-        address: "{{ controlpoint.address }}",
-        latitude: {{ controlpoint.latitude|unlocalize }},
-        longitude: {{ controlpoint.longitude|unlocalize }},
-        layer: layers.get({{ controlpoint.layer.id }}),
-        cameras: [],
-        marker: undefined
-    });
-    layers.get({{ controlpoint.layer.id }}).controlpoints.push(controlpoints.get({{ controlpoint.id }}));
-    {% endfor %}
+
     
-    var cameras = new Map();
-    {% for camera in camera_list %}
-    cameras.set("{{ camera.tag_slug }}", {
-        tag_slug: "{{ camera.tag_slug }}",
-        direction: "{{ camera.direction_verbose }}",
-        rtsp_url: "{{ camera.rtsp_url }}",
-        status: STATUS_AGENT_OFF,
-        controlpoint: controlpoints.get({{ camera.controlpoint.id }})
-    });
-    controlpoints.get({{ camera.controlpoint.id }}).cameras.push(cameras.get("{{ camera.tag_slug }}"));
-    {% endfor %}
-</script>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script type="text/javascript" src="{% static 'js/utils.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/map.js' %}"></script>
 
-<body class="w3-light-blue">
-
-<!-- Icon Bar (Sidebar - hidden on small screens) -->
-<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-  <!-- Avatar image in top left corner -->
-  <img src="{% static 'images/vr-brasao.png' %}" style="width:100%">
-  <a href="javascript:map.fitBounds(bounds)" class="w3-bar-item w3-button w3-padding-large w3-light-blue">
-    <i class="fa fa-home w3-xxlarge"></i>
-    <p>HOME</p>
-  </a>
-</nav>
-
-<!-- Navbar on small screens (Hidden on medium and large screens) -->
-<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-  <div class="w3-bar w3-light-blue w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <a href="javascript:map.fitBounds(bounds)" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
-  </div>
-</div>
-
-<!-- Page Content -->
-<div class="w3-padding-large" id="map-canvas"></div>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkGYZPNefP8ERD-xS1y_2RTHPxn-rFSdE&callback=initMap"></script>
-
-</body>
+  </body>
 </html>
