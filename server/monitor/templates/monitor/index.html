@@ -137,9 +137,10 @@
             if (camera != undefined) {
                 var answer = confirm("Voc\xEA deseja desativar o agente da c\xE2mera " + (camera.controlpoint.cameras.indexOf(camera) + 1) + " do ponto de controle '" + camera.controlpoint.name + "'?");
                 if (answer) {
-                    var xhr = new XMLHttpRequest();
-                    xhr.open("GET", "agent/" + tag_slug + "/stop/", true);
-                    xhr.send();
+                    monitorSocket.send(JSON.stringify({
+                        'event': 'stop-request',
+                        'message': tag_slug
+                    }))
                 }
             }
         }
@@ -149,9 +150,11 @@
             console.log("askAgent_ProcessinRate")
             var camera = cameras.get(tag_slug);
             if (camera != undefined) {
-                var xhr = new XMLHttpRequest();
-                xhr.open("GET", "agent/" + tag_slug + "/ask-processing-rate/" + id, true);
-                xhr.send();
+                monitorSocket.send(JSON.stringify({
+                    'event': 'ask-processing-rate',
+                    'message': tag_slug,
+                    'target': id
+                }))
             }
         }
 
@@ -324,9 +327,10 @@
                         } 
                         break;
                         
-                    case "agent-disconnect":
-                        console.log('case =  agent-disconnect')
+                    case "stop-agent":
+                        console.log('case =  stop-agent')
                         var camera = cameras.get(payload.who);
+                        console.log('camera =  '+camera)
                         if (camera != undefined) {
                             camera.status = STATUS_AGENT_OFF;
                             updateControlPoint(camera.controlpoint);
@@ -339,10 +343,11 @@
                         console.log('case =  agent-processing-rate')
                         if (payload.target == id) {
                             var camera = cameras.get(payload.who);
+                            var processing_rate = payload.message;
                             if (camera != undefined) {
                                 alert("O agente da c\xE2mera " + (camera.controlpoint.cameras.indexOf(camera) + 1)
                                     + " do ponto de controle '" + camera.controlpoint.name + "' reportou"
-                                    + " processamento a " + payload.processing_rate + " quadros por segundo.");
+                                    + " processamento a " + processing_rate + " quadros por segundo.");
                             }
                         } 
                         break;

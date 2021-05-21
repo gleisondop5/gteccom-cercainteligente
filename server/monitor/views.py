@@ -1,6 +1,6 @@
 import cv2, json, numpy, os, threading, time, logging
 from django.shortcuts import render
-#from channels import Group
+from channels.layers import get_channel_layer
 from django.conf import settings
 from django.http import HttpResponse, JsonResponse, StreamingHttpResponse, HttpResponseServerError
 from django.template import loader
@@ -24,15 +24,12 @@ video_streams = dict()
 
 
 def index(request):
-    #logger.info(f'=====> /views/index {request}')
     context = {
         'layer_list': Layer.objects.all(),
         'controlpoint_list': ControlPoint.objects.all(),
         'camera_list': Camera.objects.all().order_by('controlpoint', 'direction', 'tag_slug'),
     }
     return render(request, "monitor/index.html", context)
-    #template = loader.get_template('monitor/index.html')
-    #return HttpResponse(template.render(context, request))
 
 def test(request):
     return render(request, "monitor/test.html", context={'text': 'Hello World'})
@@ -69,17 +66,40 @@ def agent_start(request, tag_slug):
 
 def agent_stop(request, tag_slug):
     logger.info(f'=====> /views/agent_stop {request, tag_slug}')
+    channel_layer.group_send("agent", {
+        'type': 'send_message',
+        "event": "processing-rate-request",
+        'who': monitor_id,
+        'target': tag_slug
+    })
+    #logger.info(f'=====> msg stop: {msg}')
+    #send_message(msg)
+    '''
+    send("agent", {
+        'type': 'send_message',
+        "event": "stop-request",
+        'target': tag_slug
+    })
+    
     Group('agent').send({
         'text': json.dumps({
             'type': 'stop-request',
             'target': tag_slug,
         })
     })
+    '''
     return JsonResponse({'success': True})
     
     
-def agent_ask_processing_rate(request, tag_slug, monitor_id):
+def agent_ask_processing_rate(self, request, tag_slug, monitor_id):
     logger.info(f'=====> /views/agent_ask_processing_rate {request, tag_slug, monitor_id}')
+    self.channel_layer.group_send("agent", {
+        'type': 'send_message',
+        "event": "processing-rate-request",
+        'who': monitor_id,
+        'target': tag_slug
+    })
+    '''
     Group('agent').send({
         'text': json.dumps({
             'type': 'processing-rate-request',
@@ -87,7 +107,15 @@ def agent_ask_processing_rate(request, tag_slug, monitor_id):
             'who': monitor_id,
         })
     })
+    '''
     return JsonResponse({'success': True})
+
+async def send_message(self, msg):
+        logger.info(f'=====> Msg enviada: {msg}') 
+        await self.send(text_data=json.dumps({
+            "payload": msg
+        }))
+
     
     
 living_streams = dict()

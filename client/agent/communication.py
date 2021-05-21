@@ -1,4 +1,5 @@
 import asyncio
+from asyncio import sleep
 
 
 @asyncio.coroutine
@@ -18,13 +19,19 @@ def on_error(agent, data):
     
 @asyncio.coroutine
 def on_stop_request(agent, data):
+    agent.send({
+        'type': 'type',
+        'event': 'stop-agent',
+        'who': agent.tag_slug
+    })
     agent.stop()
     
     
 @asyncio.coroutine
 def on_processing_rate_request(agent, data):
     agent.send({
-        'type': 'agent-processing-rate',
+        'type': 'type',
+        'event': 'agent-processing-rate',
         'target': data['who'],
         'who': agent.tag_slug,
         'processing_rate': '%1.2f' % agent.processing_rate(),
