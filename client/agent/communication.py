@@ -1,5 +1,6 @@
 import asyncio
-from asyncio import sleep
+from time import sleep
+import time
 
 
 @asyncio.coroutine
@@ -17,13 +18,8 @@ def on_error(agent, data):
     pass
     
     
-@asyncio.coroutine
+
 def on_stop_request(agent, data):
-    agent.send({
-        'type': 'type',
-        'event': 'stop-agent',
-        'who': agent.tag_slug
-    })
     agent.stop()
     
     

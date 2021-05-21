@@ -100,28 +100,8 @@
             + '/'
         );
 
-
-           
-        /*
-        monitorSocket.onopen = function(event) {
-            // handle open event
-            //if (monitorSocket.readyState == WebSocket.OPEN) {socket.onopen();}
-            console.log(monitorSocket.readyState)
-            //window.addEventListener("load", init, false);
-            monitorSocket.send("Acorda cacete")
-
-        };
-        */
-
-
-        //monitorSocket.onopen();
-        
-
-        console.log('iniciou')
-
         //inicia um agente
         function startAgent(tag_slug) {
-            console.log("start")
             var camera = cameras.get(tag_slug);
             if (camera != undefined) {
                 var xhr = new XMLHttpRequest();
@@ -132,7 +112,6 @@
 
         //para um agente
         function stopAgent(tag_slug) {
-            console.log("stop")
             var camera = cameras.get(tag_slug);
             if (camera != undefined) {
                 var answer = confirm("Voc\xEA deseja desativar o agente da c\xE2mera " + (camera.controlpoint.cameras.indexOf(camera) + 1) + " do ponto de controle '" + camera.controlpoint.name + "'?");
@@ -147,7 +126,6 @@
 
         //mostra a taxa de processamento
         function askAgentProcessinRate(tag_slug) {
-            console.log("askAgent_ProcessinRate")
             var camera = cameras.get(tag_slug);
             if (camera != undefined) {
                 monitorSocket.send(JSON.stringify({
@@ -160,13 +138,11 @@
 
         //abre a janela de stream da camera
         function openRTSPWindow(controlpoint_id) {
-            console.log("openRTSPWindow")
             window.open("rtsp-panel/" + controlpoint_id + "/" + id, "rtsp-panel", "toolbar=0,fullscreen=0,menubar=0,location=0");
         }
 
         //cria a caixa de informação do ponto de controle
         function controlpointInfoContent(controlpoint) {
-            //console.log("controlpointInfoContent")    
             var content = "<div>" +
                 "<div><b>" + controlpoint.name + "</b><br>" + controlpoint.address + "</div>" +
                 "<div>" +
@@ -199,15 +175,8 @@
             return content;
         }
 
-        function verifica_conexao(){
-            if(monitorSocket.readyState == 0){
-                console.log('conectando')
-            }
-                
-        }
         //altera o status da camera
         function updateControlPoint(controlpoint) {
-            console.log("updateControlPoint")
             var status = STATUS_UNKNOWN
             $.each(controlpoint.cameras, function(_, camera) {
                 status = Math.min(status, camera.status);
@@ -226,7 +195,6 @@
 
         //inicializa o mapa
         function initMap() {
-            console.log("initMap")
             //cria o mapa
             map = new google.maps.Map(document.getElementById("map-canvas"), {
                 center: new google.maps.LatLng(-22.5138892, -44.0937475),
@@ -275,45 +243,19 @@
             //monta o map com as informações (junta tudo)
             map.fitBounds(bounds);
             
-            
-            /*
-            
-            if (monitorSocket.readyState==1){
-                console.log('enviou')
-                monitorSocket.send("Acorda cacete 2") 
-            }
-            
-            monitorSocket.onopen = function(event) {
-                // handle open event
-                //if (monitorSocket.readyState == WebSocket.OPEN) {socket.onopen();}
-                console.log(monitorSocket.readyState)
-                //window.addEventListener("load", init, false);
-                monitorSocket.send("Acorda cacete")
-
-            };
-            
-            */
-            
-            
-            
             monitorSocket.onmessage = function(e) {
                 var data = JSON.parse(e.data);
-                console.log(data)
 
                 payload = data["payload"];
-                console.log("payload: ")
                 console.log(payload)
 
                 let event = payload.event; 
-                console.log("event: "+event) 
 
                 switch (event) {
                     case "agent-connect":
-                        console.log('agent-connect')
                         status = 'conectado'
 
                     case "agent-update":
-                        console.log('agent-update')
                         var camera = cameras.get(payload.who); 
                         if (camera != undefined) {
                             if (payload.message == 1) {
@@ -326,9 +268,8 @@
                         } 
                         break;
                         
-                    case "stop-agent":
+                    case "agent-disconnect":
                         var camera = cameras.get(payload.who);
-                        console.log('camera =  '+camera)
                         if (camera != undefined) {
                             camera.status = STATUS_AGENT_OFF;
                             updateControlPoint(camera.controlpoint);

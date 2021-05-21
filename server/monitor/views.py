@@ -31,12 +31,8 @@ def index(request):
     }
     return render(request, "monitor/index.html", context)
 
-def test(request):
-    return render(request, "monitor/test.html", context={'text': 'Hello World'})
-
 
 def rtsp_panel(request, controlpoint_id, monitor_id):
-    logger.info(f'=====> /views/rtsp_panel {request, controlpoint_id, monitor_id}')
     context = {
         'monitor_id': monitor_id,
         'controlpoint': ControlPoint.objects.get(pk=controlpoint_id),
@@ -49,7 +45,6 @@ def rtsp_panel(request, controlpoint_id, monitor_id):
 
 def agent_start(request, tag_slug):
     try:
-        #logger.info(f'=====> /views/agent_start {request, tag_slug}')
         database = settings.DATABASES['default']
         camera = Camera.objects.get(tag_slug=tag_slug)
         command = 'nohup python3 -m gteccom-cercainteligente.client.agent --monitor "%s" --video "%s" --name "%s" --dbhost "%s" --dbport "%s" --dbname "%s" --dbuser "%s" --dbpwd "%s" > /dev/null 2>&1 &' % (
@@ -64,60 +59,6 @@ def agent_start(request, tag_slug):
         return JsonResponse({'success': False, 'error': str(error)})
 
 
-def agent_stop(request, tag_slug):
-    logger.info(f'=====> /views/agent_stop {request, tag_slug}')
-    channel_layer.group_send("agent", {
-        'type': 'send_message',
-        "event": "processing-rate-request",
-        'who': monitor_id,
-        'target': tag_slug
-    })
-    #logger.info(f'=====> msg stop: {msg}')
-    #send_message(msg)
-    '''
-    send("agent", {
-        'type': 'send_message',
-        "event": "stop-request",
-        'target': tag_slug
-    })
-    
-    Group('agent').send({
-        'text': json.dumps({
-            'type': 'stop-request',
-            'target': tag_slug,
-        })
-    })
-    '''
-    return JsonResponse({'success': True})
-    
-    
-def agent_ask_processing_rate(self, request, tag_slug, monitor_id):
-    logger.info(f'=====> /views/agent_ask_processing_rate {request, tag_slug, monitor_id}')
-    self.channel_layer.group_send("agent", {
-        'type': 'send_message',
-        "event": "processing-rate-request",
-        'who': monitor_id,
-        'target': tag_slug
-    })
-    '''
-    Group('agent').send({
-        'text': json.dumps({
-            'type': 'processing-rate-request',
-            'target': tag_slug,
-            'who': monitor_id,
-        })
-    })
-    '''
-    return JsonResponse({'success': True})
-
-async def send_message(self, msg):
-        logger.info(f'=====> Msg enviada: {msg}') 
-        await self.send(text_data=json.dumps({
-            "payload": msg
-        }))
-
-    
-    
 living_streams = dict()
 
 
@@ -184,6 +125,8 @@ def _stream_gen(video):
 
 @gzip.gzip_page
 def camera_stream_open(request, tag_slug, monitor_id):
+    logger.info(f'=====> tag_slug {tag_slug}')
+
     try:
         response = StreamingHttpResponse(_stream_gen(_VideoStream(tag_slug, monitor_id)), content_type='multipart/x-mixed-replace;boundary=frame')
         return response 

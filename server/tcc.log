@@ -1,74 +1,80 @@
-2021-05-21 17:10:55,405---INFO---server.py---HTTP/2 support not enabled (install the http2 and tls Twisted extras)
-2021-05-21 17:10:55,405---INFO---server.py---Configuring endpoint tcp:port=8000:interface=127.0.0.1
-2021-05-21 17:10:55,406---INFO---server.py---Listening on TCP address 127.0.0.1:8000
-2021-05-21 17:10:57,059---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 50222]
-2021-05-21 17:10:57,119---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 50222]
-2021-05-21 17:10:57,119---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 50222]
-2021-05-21 17:10:57,120---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 50222]
-2021-05-21 17:10:57,121---INFO---runserver.py---[mHTTP GET /monitor/ 200 [0.06, 127.0.0.1:50222][0m
-2021-05-21 17:10:57,215---INFO---runserver.py---WebSocket HANDSHAKING /monitor/ [127.0.0.1:50234]
-2021-05-21 17:10:57,215---DEBUG---http_protocol.py---Upgraded connection ['127.0.0.1', 50234] to WebSocket
-2021-05-21 17:10:57,256---DEBUG---connection.py---Creating tcp connection to ('127.0.0.1', 6379)
-2021-05-21 17:10:57,257---DEBUG---connection.py---Creating tcp connection to ('127.0.0.1', 6379)
-2021-05-21 17:10:57,259---DEBUG---ws_protocol.py---WebSocket ['127.0.0.1', 50234] open and established
-2021-05-21 17:10:57,259---INFO---runserver.py---WebSocket CONNECT /monitor/ [127.0.0.1:50234]
-2021-05-21 17:10:57,260---DEBUG---ws_protocol.py---WebSocket ['127.0.0.1', 50234] accepted by application
-2021-05-21 17:10:57,274---DEBUG---ws_protocol.py---Sent WebSocket packet to client for ['127.0.0.1', 50234]
-2021-05-21 17:11:00,406---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 50222]
-2021-05-21 17:11:00,647---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 50222]
-2021-05-21 17:11:00,648---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 50222]
-2021-05-21 17:11:00,649---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 50222]
-2021-05-21 17:11:00,650---INFO---runserver.py---[mHTTP GET /monitor/agent/celular-cam5/start/ 200 [0.24, 127.0.0.1:50222][0m
-2021-05-21 17:11:00,920---INFO---runserver.py---WebSocket HANDSHAKING /monitor/ [127.0.0.1:50272]
-2021-05-21 17:11:00,920---DEBUG---http_protocol.py---Upgraded connection ['127.0.0.1', 50272] to WebSocket
-2021-05-21 17:11:00,922---DEBUG---ws_protocol.py---WebSocket ['127.0.0.1', 50272] open and established
-2021-05-21 17:11:00,922---INFO---runserver.py---WebSocket CONNECT /monitor/ [127.0.0.1:50272]
-2021-05-21 17:11:00,922---DEBUG---ws_protocol.py---WebSocket ['127.0.0.1', 50272] accepted by application
-2021-05-21 17:11:00,926---DEBUG---ws_protocol.py---Sent WebSocket packet to client for ['127.0.0.1', 50234]
-2021-05-21 17:11:07,527---DEBUG---ws_protocol.py---WebSocket incoming frame on ['127.0.0.1', 50272]
-2021-05-21 17:11:07,528---INFO---consumers.py---=====> Msg recebida: {"type": "type", "event": "agent-update", "target-groups": ["monitor"], "who": "celular-cam5", "camera_running": 1}
-2021-05-21 17:11:07,528---INFO---consumers.py---=====> Msg enviada para agent (agent-update)
-2021-05-21 17:11:07,542---DEBUG---ws_protocol.py---Sent WebSocket packet to client for ['127.0.0.1', 50234]
-2021-05-21 17:11:15,213---DEBUG---ws_protocol.py---WebSocket incoming frame on ['127.0.0.1', 50234]
-2021-05-21 17:11:15,214---INFO---consumers.py---=====> Msg recebida: {"event":"stop-request","message":"celular-cam5"}
-2021-05-21 17:11:15,214---INFO---consumers.py---=====> Msg enviada para agent (stop-request)
-2021-05-21 17:11:15,231---DEBUG---ws_protocol.py---Sent WebSocket packet to client for ['127.0.0.1', 50272]
-2021-05-21 17:11:15,235---DEBUG---ws_protocol.py---WebSocket closed for ['127.0.0.1', 50272]
-2021-05-21 17:11:15,236---INFO---runserver.py---WebSocket DISCONNECT /monitor/ [127.0.0.1:50272]
-2021-05-21 17:11:28,907---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 50222]
-2021-05-21 17:11:28,961---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 50222]
-2021-05-21 17:11:28,962---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 50222]
-2021-05-21 17:11:28,962---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 50222]
-2021-05-21 17:11:28,962---INFO---runserver.py---[mHTTP GET /monitor/ 200 [0.06, 127.0.0.1:50222][0m
-2021-05-21 17:11:28,973---DEBUG---ws_protocol.py---WebSocket closed for ['127.0.0.1', 50234]
-2021-05-21 17:11:28,974---INFO---runserver.py---WebSocket DISCONNECT /monitor/ [127.0.0.1:50234]
-2021-05-21 17:11:28,974---DEBUG---connection.py---Cancelling waiter (<Future cancelled>, [None, None])
-2021-05-21 17:11:28,974---DEBUG---util.py---Waiter future is already done <Future cancelled>
-2021-05-21 17:11:29,044---INFO---runserver.py---WebSocket HANDSHAKING /monitor/ [127.0.0.1:50508]
-2021-05-21 17:11:29,045---DEBUG---http_protocol.py---Upgraded connection ['127.0.0.1', 50508] to WebSocket
-2021-05-21 17:11:29,065---DEBUG---connection.py---Creating tcp connection to ('127.0.0.1', 6379)
-2021-05-21 17:11:29,071---DEBUG---ws_protocol.py---WebSocket ['127.0.0.1', 50508] open and established
-2021-05-21 17:11:29,071---INFO---runserver.py---WebSocket CONNECT /monitor/ [127.0.0.1:50508]
-2021-05-21 17:11:29,072---DEBUG---ws_protocol.py---WebSocket ['127.0.0.1', 50508] accepted by application
-2021-05-21 17:11:29,090---DEBUG---ws_protocol.py---Sent WebSocket packet to client for ['127.0.0.1', 50508]
-2021-05-21 17:11:35,502---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 50222]
-2021-05-21 17:11:35,731---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 50222]
-2021-05-21 17:11:35,733---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 50222]
-2021-05-21 17:11:35,734---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 50222]
-2021-05-21 17:11:35,734---INFO---runserver.py---[mHTTP GET /monitor/agent/celular-cam5/start/ 200 [0.23, 127.0.0.1:50222][0m
-2021-05-21 17:11:36,022---INFO---runserver.py---WebSocket HANDSHAKING /monitor/ [127.0.0.1:50578]
-2021-05-21 17:11:36,022---DEBUG---http_protocol.py---Upgraded connection ['127.0.0.1', 50578] to WebSocket
-2021-05-21 17:11:36,024---DEBUG---ws_protocol.py---WebSocket ['127.0.0.1', 50578] open and established
-2021-05-21 17:11:36,024---INFO---runserver.py---WebSocket CONNECT /monitor/ [127.0.0.1:50578]
-2021-05-21 17:11:36,025---DEBUG---ws_protocol.py---WebSocket ['127.0.0.1', 50578] accepted by application
-2021-05-21 17:11:36,032---DEBUG---ws_protocol.py---Sent WebSocket packet to client for ['127.0.0.1', 50508]
-2021-05-21 17:11:42,908---DEBUG---ws_protocol.py---WebSocket incoming frame on ['127.0.0.1', 50578]
-2021-05-21 17:11:42,909---INFO---consumers.py---=====> Msg recebida: {"type": "type", "event": "agent-update", "target-groups": ["monitor"], "who": "celular-cam5", "camera_running": 1}
-2021-05-21 17:11:42,909---INFO---consumers.py---=====> Msg enviada para agent (agent-update)
-2021-05-21 17:11:42,919---DEBUG---ws_protocol.py---Sent WebSocket packet to client for ['127.0.0.1', 50508]
-2021-05-21 17:13:08,040---DEBUG---ws_protocol.py---WebSocket incoming frame on ['127.0.0.1', 50508]
-2021-05-21 17:13:08,041---INFO---consumers.py---=====> Msg recebida: {"event":"stop-request","message":"celular-cam5"}
-2021-05-21 17:13:08,042---INFO---consumers.py---=====> Msg enviada para agent (stop-request)
-2021-05-21 17:13:08,079---DEBUG---ws_protocol.py---Sent WebSocket packet to client for ['127.0.0.1', 50578]
-2021-05-21 17:13:08,081---DEBUG---ws_protocol.py---WebSocket closed for ['127.0.0.1', 50578]
-2021-05-21 17:13:08,081---INFO---runserver.py---WebSocket DISCONNECT /monitor/ [127.0.0.1:50578]
+2021-05-21 18:52:23,516---INFO---server.py---HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2021-05-21 18:52:23,517---INFO---server.py---Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2021-05-21 18:52:23,518---INFO---server.py---Listening on TCP address 127.0.0.1:8000
+2021-05-21 18:52:37,553---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 44446]
+2021-05-21 18:52:37,612---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 44446]
+2021-05-21 18:52:37,613---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 44446]
+2021-05-21 18:52:37,613---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 44446]
+2021-05-21 18:52:37,613---INFO---runserver.py---[mHTTP GET /monitor/ 200 [0.06, 127.0.0.1:44446][0m
+2021-05-21 18:52:37,707---INFO---runserver.py---WebSocket HANDSHAKING /monitor/ [127.0.0.1:44460]
+2021-05-21 18:52:37,707---DEBUG---http_protocol.py---Upgraded connection ['127.0.0.1', 44460] to WebSocket
+2021-05-21 18:52:37,745---DEBUG---connection.py---Creating tcp connection to ('127.0.0.1', 6379)
+2021-05-21 18:52:37,746---DEBUG---connection.py---Creating tcp connection to ('127.0.0.1', 6379)
+2021-05-21 18:52:37,748---DEBUG---ws_protocol.py---WebSocket ['127.0.0.1', 44460] open and established
+2021-05-21 18:52:37,748---INFO---runserver.py---WebSocket CONNECT /monitor/ [127.0.0.1:44460]
+2021-05-21 18:52:37,748---DEBUG---ws_protocol.py---WebSocket ['127.0.0.1', 44460] accepted by application
+2021-05-21 18:52:37,768---DEBUG---ws_protocol.py---Sent WebSocket packet to client for ['127.0.0.1', 44460]
+2021-05-21 18:52:43,036---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 44446]
+2021-05-21 18:52:43,259---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 44446]
+2021-05-21 18:52:43,260---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 44446]
+2021-05-21 18:52:43,260---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 44446]
+2021-05-21 18:52:43,261---INFO---runserver.py---[mHTTP GET /monitor/agent/celular-cam5/start/ 200 [0.22, 127.0.0.1:44446][0m
+2021-05-21 18:52:43,524---INFO---runserver.py---WebSocket HANDSHAKING /monitor/ [127.0.0.1:44514]
+2021-05-21 18:52:43,524---DEBUG---http_protocol.py---Upgraded connection ['127.0.0.1', 44514] to WebSocket
+2021-05-21 18:52:43,525---DEBUG---ws_protocol.py---WebSocket ['127.0.0.1', 44514] open and established
+2021-05-21 18:52:43,526---INFO---runserver.py---WebSocket CONNECT /monitor/ [127.0.0.1:44514]
+2021-05-21 18:52:43,526---DEBUG---ws_protocol.py---WebSocket ['127.0.0.1', 44514] accepted by application
+2021-05-21 18:52:43,531---DEBUG---ws_protocol.py---Sent WebSocket packet to client for ['127.0.0.1', 44460]
+2021-05-21 18:52:50,628---DEBUG---ws_protocol.py---WebSocket incoming frame on ['127.0.0.1', 44514]
+2021-05-21 18:52:50,661---DEBUG---ws_protocol.py---Sent WebSocket packet to client for ['127.0.0.1', 44460]
+2021-05-21 18:52:53,289---DEBUG---ws_protocol.py---WebSocket incoming frame on ['127.0.0.1', 44460]
+2021-05-21 18:52:53,304---DEBUG---ws_protocol.py---Sent WebSocket packet to client for ['127.0.0.1', 44514]
+2021-05-21 18:52:53,306---DEBUG---ws_protocol.py---WebSocket incoming frame on ['127.0.0.1', 44514]
+2021-05-21 18:52:53,320---DEBUG---ws_protocol.py---Sent WebSocket packet to client for ['127.0.0.1', 44460]
+2021-05-21 18:52:56,444---DEBUG---ws_protocol.py---WebSocket incoming frame on ['127.0.0.1', 44460]
+2021-05-21 18:52:56,483---DEBUG---ws_protocol.py---Sent WebSocket packet to client for ['127.0.0.1', 44514]
+2021-05-21 18:52:56,486---DEBUG---ws_protocol.py---WebSocket incoming frame on ['127.0.0.1', 44514]
+2021-05-21 18:52:56,495---DEBUG---ws_protocol.py---Sent WebSocket packet to client for ['127.0.0.1', 44460]
+2021-05-21 18:53:03,395---DEBUG---ws_protocol.py---WebSocket incoming frame on ['127.0.0.1', 44460]
+2021-05-21 18:53:03,439---DEBUG---ws_protocol.py---Sent WebSocket packet to client for ['127.0.0.1', 44514]
+2021-05-21 18:53:03,479---DEBUG---ws_protocol.py---WebSocket closed for ['127.0.0.1', 44514]
+2021-05-21 18:53:03,479---INFO---runserver.py---WebSocket DISCONNECT /monitor/ [127.0.0.1:44514]
+2021-05-21 18:53:03,488---DEBUG---ws_protocol.py---Sent WebSocket packet to client for ['127.0.0.1', 44460]
+2021-05-21 18:56:04,825---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 46160]
+2021-05-21 18:56:04,875---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 46160]
+2021-05-21 18:56:04,875---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 46160]
+2021-05-21 18:56:04,877---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 46160]
+2021-05-21 18:56:04,877---INFO---runserver.py---[mHTTP GET /monitor/ 200 [0.05, 127.0.0.1:46160][0m
+2021-05-21 18:56:04,887---DEBUG---ws_protocol.py---WebSocket closed for ['127.0.0.1', 44460]
+2021-05-21 18:56:04,888---INFO---runserver.py---WebSocket DISCONNECT /monitor/ [127.0.0.1:44460]
+2021-05-21 18:56:04,889---DEBUG---connection.py---Cancelling waiter (<Future cancelled>, [None, None])
+2021-05-21 18:56:04,890---DEBUG---util.py---Waiter future is already done <Future cancelled>
+2021-05-21 18:56:04,958---INFO---runserver.py---WebSocket HANDSHAKING /monitor/ [127.0.0.1:46164]
+2021-05-21 18:56:04,958---DEBUG---http_protocol.py---Upgraded connection ['127.0.0.1', 46164] to WebSocket
+2021-05-21 18:56:04,976---DEBUG---connection.py---Creating tcp connection to ('127.0.0.1', 6379)
+2021-05-21 18:56:04,978---DEBUG---ws_protocol.py---WebSocket ['127.0.0.1', 46164] open and established
+2021-05-21 18:56:04,978---INFO---runserver.py---WebSocket CONNECT /monitor/ [127.0.0.1:46164]
+2021-05-21 18:56:04,979---DEBUG---ws_protocol.py---WebSocket ['127.0.0.1', 46164] accepted by application
+2021-05-21 18:56:05,010---DEBUG---ws_protocol.py---Sent WebSocket packet to client for ['127.0.0.1', 46164]
+2021-05-21 18:56:10,053---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 46160]
+2021-05-21 18:56:10,281---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 46160]
+2021-05-21 18:56:10,281---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 46160]
+2021-05-21 18:56:10,281---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 46160]
+2021-05-21 18:56:10,282---INFO---runserver.py---[mHTTP GET /monitor/agent/celular-cam5/start/ 200 [0.23, 127.0.0.1:46160][0m
+2021-05-21 18:56:10,459---INFO---runserver.py---WebSocket HANDSHAKING /monitor/ [127.0.0.1:46224]
+2021-05-21 18:56:10,460---DEBUG---http_protocol.py---Upgraded connection ['127.0.0.1', 46224] to WebSocket
+2021-05-21 18:56:10,461---DEBUG---ws_protocol.py---WebSocket ['127.0.0.1', 46224] open and established
+2021-05-21 18:56:10,461---INFO---runserver.py---WebSocket CONNECT /monitor/ [127.0.0.1:46224]
+2021-05-21 18:56:10,461---DEBUG---ws_protocol.py---WebSocket ['127.0.0.1', 46224] accepted by application
+2021-05-21 18:56:10,466---DEBUG---ws_protocol.py---Sent WebSocket packet to client for ['127.0.0.1', 46164]
+2021-05-21 18:56:16,938---DEBUG---ws_protocol.py---WebSocket incoming frame on ['127.0.0.1', 46224]
+2021-05-21 18:56:16,951---DEBUG---ws_protocol.py---Sent WebSocket packet to client for ['127.0.0.1', 46164]
+2021-05-21 18:56:21,664---DEBUG---ws_protocol.py---WebSocket incoming frame on ['127.0.0.1', 46164]
+2021-05-21 18:56:21,673---DEBUG---ws_protocol.py---Sent WebSocket packet to client for ['127.0.0.1', 46224]
+2021-05-21 18:56:21,674---DEBUG---ws_protocol.py---WebSocket incoming frame on ['127.0.0.1', 46224]
+2021-05-21 18:56:21,683---DEBUG---ws_protocol.py---Sent WebSocket packet to client for ['127.0.0.1', 46164]
+2021-05-21 18:56:29,414---DEBUG---ws_protocol.py---WebSocket incoming frame on ['127.0.0.1', 46164]
+2021-05-21 18:56:29,441---DEBUG---ws_protocol.py---Sent WebSocket packet to client for ['127.0.0.1', 46224]
+2021-05-21 18:56:29,446---DEBUG---ws_protocol.py---WebSocket closed for ['127.0.0.1', 46224]
+2021-05-21 18:56:29,447---INFO---runserver.py---WebSocket DISCONNECT /monitor/ [127.0.0.1:46224]
+2021-05-21 18:56:29,463---DEBUG---ws_protocol.py---Sent WebSocket packet to client for ['127.0.0.1', 46164]

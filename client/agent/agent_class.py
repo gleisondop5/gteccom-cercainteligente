@@ -79,6 +79,7 @@ class Agent:
                             self.logger.debug('\tpayload = %s' % payload)
                             callback = communication.CALLBACKS.get(payload['event'])
                             self.logger.debug('\tcallback = %s' % callback)
+                            self._ws.send('testando')
                             if callback is not None and payload.get('message', self.tag_slug) == self.tag_slug: yield from callback(self, payload)
                         self.logger.info('%s\twebsocket - closed' % self.tag_slug)
                     finally:
