@@ -105,6 +105,17 @@ class monitorConsumer(AsyncWebsocketConsumer):
         response = json.loads(text_data)
         self.event = response.get("event", None)
         
+        if self.event == 'agent-update':
+                logger.info(f'=====> Msg enviada para agent (agent-update)') 
+                
+                message = response.get("camera_running", None)
+                tag_slug = response.get("who", None)
+                await self.channel_layer.group_send("monitor", {
+                    'type': 'send_message',
+                    "event": "agent-update",
+                    'who': tag_slug,
+                    'message': message
+                })        
 
         if self.event == 'stop-request':
                 logger.info(f'=====> Msg enviada para agent (stop-request)') 

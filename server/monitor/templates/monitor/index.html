@@ -298,26 +298,25 @@
             
             monitorSocket.onmessage = function(e) {
                 var data = JSON.parse(e.data);
-                console.log("data:")
                 console.log(data)
 
                 payload = data["payload"];
-                console.log("payload:")
+                console.log("payload: ")
                 console.log(payload)
 
                 let event = payload.event; 
-                console.log("event:") 
-                console.log(event)
+                console.log("event: "+event) 
 
                 switch (event) {
                     case "agent-connect":
-                        console.log('case =  agent-connect')
+                        console.log('agent-connect')
                         status = 'conectado'
+
                     case "agent-update":
-                        console.log('case =  agent-update')
+                        console.log('agent-update')
                         var camera = cameras.get(payload.who); 
                         if (camera != undefined) {
-                            if (payload.camera_running == 1) {
+                            if (payload.message == 1) {
                                 camera.status = STATUS_AGENT_ON_CAMERA_ON;
                             }
                             else {
@@ -328,7 +327,6 @@
                         break;
                         
                     case "stop-agent":
-                        console.log('case =  stop-agent')
                         var camera = cameras.get(payload.who);
                         console.log('camera =  '+camera)
                         if (camera != undefined) {
@@ -340,7 +338,6 @@
                         break;
                         
                     case "agent-processing-rate":
-                        console.log('case =  agent-processing-rate')
                         if (payload.target == id) {
                             var camera = cameras.get(payload.who);
                             var processing_rate = payload.message;
@@ -353,7 +350,6 @@
                         break;
                         
                     case "inventory":
-                        console.log('case = inventory')
                         $.each(payload.agents, function(_, pair) {
                             var camera = cameras.get(pair[0]); 
                             if (camera != undefined) {

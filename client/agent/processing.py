@@ -1,6 +1,7 @@
 def on_open(agent, data):
     agent.send({
-        'type': 'agent-update',
+        'type': 'type',
+        'event': 'agent-update',
         'target-groups': ['monitor'],
         'who': agent.tag_slug,
         'camera_running': 1,
@@ -17,7 +18,8 @@ def on_plate(agent, data):
 
 def on_close(agent, data):
     agent.send({
-        'type': 'agent-update',
+        'type': 'type',
+        'event': 'agent-update',
         'target-groups': ['monitor'],
         'who': agent.tag_slug,
         'camera_running': 0,
