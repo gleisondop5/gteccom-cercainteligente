@@ -6,7 +6,6 @@ from django.http import HttpResponse, JsonResponse, StreamingHttpResponse, HttpR
 from django.template import loader
 from django.views.decorators import gzip
 from queue import Queue, Full, Empty
-
 from .models import Layer, ControlPoint, Camera
 
 
@@ -21,6 +20,9 @@ logger = logging.getLogger('root')
 
 
 video_streams = dict()
+
+def test(request):
+	return render(request, "monitor/test.html")
 
 
 def index(request):
@@ -38,9 +40,7 @@ def rtsp_panel(request, controlpoint_id, monitor_id):
         'controlpoint': ControlPoint.objects.get(pk=controlpoint_id),
         'camera_list': Camera.objects.filter(controlpoint=controlpoint_id).order_by('direction', 'tag_slug'),
     }
-    template = loader.get_template('monitor/rtsp-panel.html')
-    return HttpResponse(template.render(context, request))
-
+    return render(request, "monitor/rtsp-panel.html", context)
 
 
 def agent_start(request, tag_slug):
@@ -62,78 +62,30 @@ def agent_start(request, tag_slug):
 living_streams = dict()
 
 
-class _VideoStream(object):
+class VideoCamera():
+    def __init__(self):
+        #self.video = cv2.VideoCapture("rtsp://192.168.1.7:8085/h264_ulaw.sdp")
+        self.video = cv2.VideoCapture(0)
 
-
-    def __init__(self, tag_slug, monitor_id):
-        self.TIMEOUT = 10  # in seconds
-        self.QUEUE_SIZE = 60
-        self._key = (tag_slug, monitor_id)
-        self._frame_shape = (100, 100, 3)
-        self._queue = Queue(maxsize=self.QUEUE_SIZE)
-        threading.Thread(target=self._update, args=(Camera.objects.get(tag_slug=tag_slug).rtsp_url, ), daemon=True).start()
-
-
-    def _update(self, video_path):
-        video = cv2.VideoCapture(video_path)
-        try:
-            keep_running, frame = video.read()
-            living_streams[self._key] = time.time()
-            try:
-                while keep_running and (time.time() - living_streams[self._key]) <= self.TIMEOUT:
-                    frame = cv2.resize(frame, None, fx=0.25, fy=0.25, interpolation=cv2.INTER_CUBIC);
-                    self._frame_shape = frame.shape
-                    keep_running, jpeg = cv2.imencode('.jpg', frame)
-                    if keep_running:
-                        try: 
-                            self._queue.put(jpeg.tostring(), timeout=self.TIMEOUT)
-                        except Full:
-                            keep_running = False
-                        keep_running, frame = video.read()
-            finally:
-                del living_streams[self._key]                
-        finally:
-            video.release()
-
-            
-    def _make_no_signal_frame(self):
-        text = 'No signal';
-        font_face = cv2.FONT_HERSHEY_PLAIN;
-        font_scale = 1;
-        thickness = 1;
-    
-        frame = numpy.zeros(self._frame_shape, numpy.uint8)
-        text_size, _ = cv2.getTextSize(text, font_face, font_scale, thickness);
-        cv2.putText(frame, text, (5, 5 + text_size[1]), font_face, font_scale, (255, 255, 255), thickness)
-    
-        return cv2.imencode('.jpg', frame)[1].tostring()
-
+    def __del__(self):
+        self.video.release()
 
     def get_frame(self):
-        try:
-            return True, self._queue.get(timeout=self.TIMEOUT)
-        except Empty:
-            return False, self._make_no_signal_frame()
-
+        success,imgNp = self.video.read()
+        resize = cv2.resize(imgNp, (640, 480), interpolation = cv2.INTER_LINEAR) 
+        ret, jpeg = cv2.imencode('.jpg', resize)
+        return jpeg.tobytes()
 
 def _stream_gen(video):
-    success = True
-    while success:
-        success, jpeg = video.get_frame()
-        yield b'--frame\r\nContent-Type: image/jpeg\r\n\r\n' + jpeg + b'\r\n\r\n'
+    while True:
+        frame = VideoCamera.get_frame(video)
+        yield (b'--frame\r\n'b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
 
 
-@gzip.gzip_page
 def camera_stream_open(request, tag_slug, monitor_id):
-    logger.info(f'=====> tag_slug {tag_slug}')
+    return StreamingHttpResponse(_stream_gen(VideoCamera()), content_type='multipart/x-mixed-replace; boundary=frame')
+        
 
-    try:
-        response = StreamingHttpResponse(_stream_gen(_VideoStream(tag_slug, monitor_id)), content_type='multipart/x-mixed-replace;boundary=frame')
-        return response 
-    except HttpResponseServerError as error:
-        return error
-        
-        
 def camera_stream_keep_alive(request, tag_slug, monitor_id):
     key = (tag_slug, monitor_id)
     if key in living_streams: 
