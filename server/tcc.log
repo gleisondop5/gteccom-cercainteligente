@@ -1,518 +1,114 @@
-2021-06-07 16:21:15,395---INFO---server.py---HTTP/2 support not enabled (install the http2 and tls Twisted extras)
-2021-06-07 16:21:15,395---INFO---server.py---Configuring endpoint tcp:port=8000:interface=127.0.0.1
-2021-06-07 16:21:15,396---INFO---server.py---Listening on TCP address 127.0.0.1:8000
-2021-06-07 16:21:19,613---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 47476]
-2021-06-07 16:21:19,681---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 47476]
-2021-06-07 16:21:19,682---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 47476]
-2021-06-07 16:21:19,682---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 47476]
-2021-06-07 16:21:19,682---INFO---runserver.py---[mHTTP GET /placaList 200 [0.07, 127.0.0.1:47476][0m
-2021-06-07 16:21:19,710---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 47476]
-2021-06-07 16:21:19,713---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 47482]
-2021-06-07 16:21:19,716---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 47484]
-2021-06-07 16:21:19,758---WARNING---log.py---Not Found: /js/jquery.tablesorter.min.js
-2021-06-07 16:21:19,759---DEBUG---http_protocol.py---HTTP 404 response started for ['127.0.0.1', 47482]
-2021-06-07 16:21:19,758---WARNING---log.py---Not Found: /js/scripts.js
-2021-06-07 16:21:19,759---WARNING---log.py---Not Found: /js/jquery-latest.js
-2021-06-07 16:21:19,760---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 47482]
-2021-06-07 16:21:19,760---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 47482]
-2021-06-07 16:21:19,761---WARNING---runserver.py---[33mHTTP GET /js/jquery.tablesorter.min.js 404 [0.05, 127.0.0.1:47482][0m
-2021-06-07 16:21:19,763---DEBUG---http_protocol.py---HTTP 404 response started for ['127.0.0.1', 47484]
-2021-06-07 16:21:19,764---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 47484]
-2021-06-07 16:21:19,765---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 47484]
-2021-06-07 16:21:19,765---WARNING---runserver.py---[33mHTTP GET /js/scripts.js 404 [0.05, 127.0.0.1:47484][0m
-2021-06-07 16:21:19,765---DEBUG---http_protocol.py---HTTP 404 response started for ['127.0.0.1', 47476]
-2021-06-07 16:21:19,766---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 47476]
-2021-06-07 16:21:19,766---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 47476]
-2021-06-07 16:21:19,766---WARNING---runserver.py---[33mHTTP GET /js/jquery-latest.js 404 [0.06, 127.0.0.1:47476][0m
-2021-06-07 16:21:19,771---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 47476]
-2021-06-07 16:21:19,786---WARNING---log.py---Not Found: /js/jquery.tablesorter.min.js
-2021-06-07 16:21:19,786---DEBUG---http_protocol.py---HTTP 404 response started for ['127.0.0.1', 47476]
-2021-06-07 16:21:19,787---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 47476]
-2021-06-07 16:21:19,787---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 47476]
-2021-06-07 16:21:19,787---WARNING---runserver.py---[33mHTTP GET /js/jquery.tablesorter.min.js 404 [0.02, 127.0.0.1:47476][0m
-2021-06-07 16:21:19,796---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 47476]
-2021-06-07 16:21:19,807---WARNING---log.py---Not Found: /js/scripts.js
-2021-06-07 16:21:19,808---DEBUG---http_protocol.py---HTTP 404 response started for ['127.0.0.1', 47476]
-2021-06-07 16:21:19,808---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 47476]
-2021-06-07 16:21:19,808---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 47476]
-2021-06-07 16:21:19,809---WARNING---runserver.py---[33mHTTP GET /js/scripts.js 404 [0.01, 127.0.0.1:47476][0m
-2021-06-07 16:23:20,898---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 48466]
-2021-06-07 16:23:20,969---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 48466]
-2021-06-07 16:23:20,971---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 48466]
-2021-06-07 16:23:20,972---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 48466]
-2021-06-07 16:23:20,972---INFO---runserver.py---[mHTTP GET /placaList 200 [0.07, 127.0.0.1:48466][0m
-2021-06-07 16:23:21,017---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 48466]
-2021-06-07 16:23:21,018---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 48470]
-2021-06-07 16:23:21,019---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 48472]
-2021-06-07 16:23:21,021---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 48466]
-2021-06-07 16:23:21,027---DEBUG---http_protocol.py---HTTP response chunk for ['127.0.0.1', 48466]
-2021-06-07 16:23:21,029---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 48466]
-2021-06-07 16:23:21,030---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 48466]
-2021-06-07 16:23:21,030---INFO---runserver.py---[mHTTP GET /static/js/jquery-latest.js 200 [0.01, 127.0.0.1:48466][0m
-2021-06-07 16:23:21,046---WARNING---log.py---Not Found: /js/jquery.tablesorter.min.js
-2021-06-07 16:23:21,046---WARNING---log.py---Not Found: /js/scripts.js
-2021-06-07 16:23:21,047---DEBUG---http_protocol.py---HTTP 404 response started for ['127.0.0.1', 48470]
-2021-06-07 16:23:21,047---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 48470]
-2021-06-07 16:23:21,047---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 48470]
-2021-06-07 16:23:21,047---WARNING---runserver.py---[33mHTTP GET /js/jquery.tablesorter.min.js 404 [0.03, 127.0.0.1:48470][0m
-2021-06-07 16:23:21,048---DEBUG---http_protocol.py---HTTP 404 response started for ['127.0.0.1', 48472]
-2021-06-07 16:23:21,049---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 48472]
-2021-06-07 16:23:21,050---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 48472]
-2021-06-07 16:23:21,050---WARNING---runserver.py---[33mHTTP GET /js/scripts.js 404 [0.03, 127.0.0.1:48472][0m
-2021-06-07 16:23:21,127---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 48472]
-2021-06-07 16:23:21,136---WARNING---log.py---Not Found: /js/jquery.tablesorter.min.js
-2021-06-07 16:23:21,136---DEBUG---http_protocol.py---HTTP 404 response started for ['127.0.0.1', 48472]
-2021-06-07 16:23:21,137---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 48472]
-2021-06-07 16:23:21,137---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 48472]
-2021-06-07 16:23:21,137---WARNING---runserver.py---[33mHTTP GET /js/jquery.tablesorter.min.js 404 [0.01, 127.0.0.1:48472][0m
-2021-06-07 16:23:21,143---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 48472]
-2021-06-07 16:23:21,155---WARNING---log.py---Not Found: /js/scripts.js
-2021-06-07 16:23:21,155---DEBUG---http_protocol.py---HTTP 404 response started for ['127.0.0.1', 48472]
-2021-06-07 16:23:21,156---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 48472]
-2021-06-07 16:23:21,156---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 48472]
-2021-06-07 16:23:21,156---WARNING---runserver.py---[33mHTTP GET /js/scripts.js 404 [0.01, 127.0.0.1:48472][0m
-2021-06-07 16:24:31,346---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 49042]
-2021-06-07 16:24:31,381---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 49042]
-2021-06-07 16:24:31,381---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 49042]
-2021-06-07 16:24:31,382---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 49042]
-2021-06-07 16:24:31,382---INFO---runserver.py---[mHTTP GET /placaList 200 [0.04, 127.0.0.1:49042][0m
-2021-06-07 16:24:31,427---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 49042]
-2021-06-07 16:24:31,428---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 49046]
-2021-06-07 16:24:31,429---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 49042]
-2021-06-07 16:24:31,430---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 49046]
-2021-06-07 16:24:31,430---DEBUG---http_protocol.py---HTTP response chunk for ['127.0.0.1', 49042]
-2021-06-07 16:24:31,431---DEBUG---http_protocol.py---HTTP response chunk for ['127.0.0.1', 49046]
-2021-06-07 16:24:31,432---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 49042]
-2021-06-07 16:24:31,433---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 49042]
-2021-06-07 16:24:31,433---INFO---runserver.py---[mHTTP GET /static/js/jquery.tablesorter.min.js 200 [0.01, 127.0.0.1:49042][0m
-2021-06-07 16:24:31,433---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 49046]
-2021-06-07 16:24:31,433---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 49046]
-2021-06-07 16:24:31,433---INFO---runserver.py---[mHTTP GET /static/js/scripts.js 200 [0.01, 127.0.0.1:49046][0m
-2021-06-07 16:25:47,276---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 49658]
-2021-06-07 16:25:47,305---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 49658]
-2021-06-07 16:25:47,305---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 49658]
-2021-06-07 16:25:47,305---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 49658]
-2021-06-07 16:25:47,305---INFO---runserver.py---[mHTTP GET /placaList 200 [0.03, 127.0.0.1:49658][0m
-2021-06-07 16:31:47,997---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 52552]
-2021-06-07 16:31:48,022---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 52552]
-2021-06-07 16:31:48,022---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 52552]
-2021-06-07 16:31:48,023---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 52552]
-2021-06-07 16:31:48,023---INFO---runserver.py---[mHTTP GET /placaList 200 [0.03, 127.0.0.1:52552][0m
-2021-06-07 16:31:48,052---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 52552]
-2021-06-07 16:31:48,055---DEBUG---http_protocol.py---HTTP 304 response started for ['127.0.0.1', 52552]
-2021-06-07 16:31:48,056---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 52552]
-2021-06-07 16:31:48,057---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 52552]
-2021-06-07 16:31:48,057---INFO---runserver.py---[36mHTTP GET /static/style/style.css 304 [0.01, 127.0.0.1:52552][0m
-2021-06-07 16:32:14,473---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 52552]
-2021-06-07 16:32:14,508---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 52552]
-2021-06-07 16:32:14,509---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 52552]
-2021-06-07 16:32:14,509---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 52552]
-2021-06-07 16:32:14,509---INFO---runserver.py---[mHTTP GET /placaList 200 [0.04, 127.0.0.1:52552][0m
-2021-06-07 16:32:30,216---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 52910]
-2021-06-07 16:32:30,238---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 52910]
-2021-06-07 16:32:30,238---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 52910]
-2021-06-07 16:32:30,239---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 52910]
-2021-06-07 16:32:30,239---INFO---runserver.py---[mHTTP GET /placaList 200 [0.02, 127.0.0.1:52910][0m
-2021-06-07 16:32:30,284---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 52910]
-2021-06-07 16:32:30,286---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 52910]
-2021-06-07 16:32:30,290---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 52914]
-2021-06-07 16:32:30,292---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 52916]
-2021-06-07 16:32:30,295---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 52918]
-2021-06-07 16:32:30,295---DEBUG---http_protocol.py---HTTP response chunk for ['127.0.0.1', 52910]
-2021-06-07 16:32:30,296---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 52914]
-2021-06-07 16:32:30,299---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 52910]
-2021-06-07 16:32:30,300---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 52910]
-2021-06-07 16:32:30,300---INFO---runserver.py---[mHTTP GET /static/style/style.css 200 [0.02, 127.0.0.1:52910][0m
-2021-06-07 16:32:30,302---DEBUG---http_protocol.py---HTTP response chunk for ['127.0.0.1', 52914]
-2021-06-07 16:32:30,304---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 52916]
-2021-06-07 16:32:30,305---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 52918]
-2021-06-07 16:32:30,307---DEBUG---http_protocol.py---HTTP response chunk for ['127.0.0.1', 52916]
-2021-06-07 16:32:30,308---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 52914]
-2021-06-07 16:32:30,308---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 52914]
-2021-06-07 16:32:30,308---INFO---runserver.py---[mHTTP GET /static/js/jquery-latest.js 200 [0.02, 127.0.0.1:52914][0m
-2021-06-07 16:32:30,310---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 52910]
-2021-06-07 16:32:30,311---DEBUG---http_protocol.py---HTTP response chunk for ['127.0.0.1', 52918]
-2021-06-07 16:32:30,312---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 52916]
-2021-06-07 16:32:30,312---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 52916]
-2021-06-07 16:32:30,312---INFO---runserver.py---[mHTTP GET /static/js/jquery.tablesorter.min.js 200 [0.02, 127.0.0.1:52916][0m
-2021-06-07 16:32:30,313---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 52910]
-2021-06-07 16:32:30,314---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 52918]
-2021-06-07 16:32:30,314---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 52918]
-2021-06-07 16:32:30,314---INFO---runserver.py---[mHTTP GET /static/js/scripts.js 200 [0.02, 127.0.0.1:52918][0m
-2021-06-07 16:32:30,315---DEBUG---http_protocol.py---HTTP response chunk for ['127.0.0.1', 52910]
-2021-06-07 16:32:30,317---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 52910]
-2021-06-07 16:32:30,317---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 52910]
-2021-06-07 16:32:30,317---INFO---runserver.py---[mHTTP GET /static/images/logo-uff.png 200 [0.01, 127.0.0.1:52910][0m
-2021-06-07 16:32:32,341---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 52910]
-2021-06-07 16:32:32,416---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 52910]
-2021-06-07 16:32:32,416---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 52910]
-2021-06-07 16:32:32,416---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 52910]
-2021-06-07 16:32:32,416---INFO---runserver.py---[mHTTP GET /accounts/login/ 200 [0.08, 127.0.0.1:52910][0m
-2021-06-07 16:32:41,644---DEBUG---http_protocol.py---HTTP b'POST' request for ['127.0.0.1', 52910]
-2021-06-07 16:32:41,807---DEBUG---http_protocol.py---HTTP 302 response started for ['127.0.0.1', 52910]
-2021-06-07 16:32:41,807---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 52910]
-2021-06-07 16:32:41,807---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 52910]
-2021-06-07 16:32:41,807---INFO---runserver.py---[32mHTTP POST /accounts/login/ 302 [0.16, 127.0.0.1:52910][0m
-2021-06-07 16:32:41,810---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 52910]
-2021-06-07 16:32:41,812---DEBUG---http_protocol.py---HTTP 301 response started for ['127.0.0.1', 52910]
-2021-06-07 16:32:41,812---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 52910]
-2021-06-07 16:32:41,812---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 52910]
-2021-06-07 16:32:41,812---INFO---runserver.py---[32mHTTP GET /monitor 301 [0.00, 127.0.0.1:52910][0m
-2021-06-07 16:32:41,815---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 52910]
-2021-06-07 16:32:41,861---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 52910]
-2021-06-07 16:32:41,861---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 52910]
-2021-06-07 16:32:41,862---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 52910]
-2021-06-07 16:32:41,862---INFO---runserver.py---[mHTTP GET /monitor/ 200 [0.05, 127.0.0.1:52910][0m
-2021-06-07 16:32:41,888---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 52910]
-2021-06-07 16:32:41,889---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 52918]
-2021-06-07 16:32:41,890---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 52910]
-2021-06-07 16:32:41,892---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 52918]
-2021-06-07 16:32:41,893---DEBUG---http_protocol.py---HTTP response chunk for ['127.0.0.1', 52910]
-2021-06-07 16:32:41,893---DEBUG---http_protocol.py---HTTP response chunk for ['127.0.0.1', 52918]
-2021-06-07 16:32:41,894---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 52910]
-2021-06-07 16:32:41,894---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 52910]
-2021-06-07 16:32:41,895---INFO---runserver.py---[mHTTP GET /static/js/utils.js 200 [0.01, 127.0.0.1:52910][0m
-2021-06-07 16:32:41,895---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 52918]
-2021-06-07 16:32:41,896---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 52918]
-2021-06-07 16:32:41,896---INFO---runserver.py---[mHTTP GET /static/js/map.js 200 [0.01, 127.0.0.1:52918][0m
-2021-06-07 16:32:42,900---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 52918]
-2021-06-07 16:32:42,901---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 52918]
-2021-06-07 16:32:42,904---DEBUG---http_protocol.py---HTTP response chunk for ['127.0.0.1', 52918]
-2021-06-07 16:32:42,905---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 52918]
-2021-06-07 16:32:42,905---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 52918]
-2021-06-07 16:32:42,905---INFO---runserver.py---[mHTTP GET /static/data/city.json 200 [0.01, 127.0.0.1:52918][0m
-2021-06-07 16:32:42,910---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 52918]
-2021-06-07 16:32:42,911---INFO---runserver.py---WebSocket HANDSHAKING /monitor/ [127.0.0.1:53052]
-2021-06-07 16:32:42,912---DEBUG---http_protocol.py---Upgraded connection ['127.0.0.1', 53052] to WebSocket
-2021-06-07 16:32:42,913---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 52918]
-2021-06-07 16:32:42,915---DEBUG---http_protocol.py---HTTP response chunk for ['127.0.0.1', 52918]
-2021-06-07 16:32:42,917---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 52918]
-2021-06-07 16:32:42,917---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 52918]
-2021-06-07 16:32:42,917---INFO---runserver.py---[mHTTP GET /static/images/icons/camera-red.png 200 [0.01, 127.0.0.1:52918][0m
-2021-06-07 16:32:42,947---DEBUG---connection.py---Creating tcp connection to ('127.0.0.1', 6379)
-2021-06-07 16:32:42,949---DEBUG---connection.py---Creating tcp connection to ('127.0.0.1', 6379)
-2021-06-07 16:32:42,952---DEBUG---ws_protocol.py---WebSocket ['127.0.0.1', 53052] open and established
-2021-06-07 16:32:42,952---INFO---runserver.py---WebSocket CONNECT /monitor/ [127.0.0.1:53052]
-2021-06-07 16:32:42,952---DEBUG---ws_protocol.py---WebSocket ['127.0.0.1', 53052] accepted by application
-2021-06-07 16:32:42,954---DEBUG---ws_protocol.py---Sent WebSocket packet to client for ['127.0.0.1', 53052]
-2021-06-07 16:32:43,788---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 52918]
-2021-06-07 16:32:43,790---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 52918]
-2021-06-07 16:32:43,791---DEBUG---http_protocol.py---HTTP response chunk for ['127.0.0.1', 52918]
-2021-06-07 16:32:43,792---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 52918]
-2021-06-07 16:32:43,793---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 52918]
-2021-06-07 16:32:43,793---INFO---runserver.py---[mHTTP GET /static/images/icons/camera-white.png 200 [0.01, 127.0.0.1:52918][0m
-2021-06-07 16:32:44,224---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 52918]
-2021-06-07 16:32:44,274---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 52918]
-2021-06-07 16:32:44,275---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 52918]
-2021-06-07 16:32:44,275---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 52918]
-2021-06-07 16:32:44,275---INFO---runserver.py---[mHTTP GET /placaList 200 [0.05, 127.0.0.1:52918][0m
-2021-06-07 16:32:44,335---DEBUG---ws_protocol.py---WebSocket closed for ['127.0.0.1', 53052]
-2021-06-07 16:32:44,336---INFO---runserver.py---WebSocket DISCONNECT /monitor/ [127.0.0.1:53052]
-2021-06-07 16:32:44,336---DEBUG---connection.py---Cancelling waiter (<Future cancelled>, [None, None])
-2021-06-07 16:32:44,336---DEBUG---util.py---Waiter future is already done <Future cancelled>
-2021-06-07 16:32:44,360---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 52918]
-2021-06-07 16:32:44,363---DEBUG---http_protocol.py---HTTP 304 response started for ['127.0.0.1', 52918]
-2021-06-07 16:32:44,367---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 52918]
-2021-06-07 16:32:44,367---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 52918]
-2021-06-07 16:32:44,368---INFO---runserver.py---[36mHTTP GET /static/js/scripts.js 304 [0.01, 127.0.0.1:52918][0m
-2021-06-07 16:33:13,463---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 52918]
-2021-06-07 16:33:13,516---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 52918]
-2021-06-07 16:33:13,516---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 52918]
-2021-06-07 16:33:13,517---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 52918]
-2021-06-07 16:33:13,517---INFO---runserver.py---[mHTTP GET /placaList 200 [0.05, 127.0.0.1:52918][0m
-2021-06-07 16:33:13,559---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 52918]
-2021-06-07 16:33:13,560---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 52918]
-2021-06-07 16:33:13,562---DEBUG---http_protocol.py---HTTP response chunk for ['127.0.0.1', 52918]
-2021-06-07 16:33:13,565---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 52918]
-2021-06-07 16:33:13,567---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 52918]
-2021-06-07 16:33:13,568---INFO---runserver.py---[mHTTP GET /static/js/scripts.js 200 [0.01, 127.0.0.1:52918][0m
-2021-06-07 16:42:54,632---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 58256]
-2021-06-07 16:42:54,674---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 58256]
-2021-06-07 16:42:54,675---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 58256]
-2021-06-07 16:42:54,675---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 58256]
-2021-06-07 16:42:54,675---INFO---runserver.py---[mHTTP GET /placaList 200 [0.04, 127.0.0.1:58256][0m
-2021-06-07 16:42:54,713---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 58256]
-2021-06-07 16:42:54,714---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 58260]
-2021-06-07 16:42:54,716---DEBUG---http_protocol.py---HTTP 304 response started for ['127.0.0.1', 58256]
-2021-06-07 16:42:54,716---DEBUG---http_protocol.py---HTTP 304 response started for ['127.0.0.1', 58260]
-2021-06-07 16:42:54,718---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 58260]
-2021-06-07 16:42:54,718---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 58260]
-2021-06-07 16:42:54,718---INFO---runserver.py---[36mHTTP GET /static/js/scripts.js 304 [0.00, 127.0.0.1:58260][0m
-2021-06-07 16:42:54,718---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 58256]
-2021-06-07 16:42:54,719---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 58256]
-2021-06-07 16:42:54,720---INFO---runserver.py---[36mHTTP GET /static/style/style.css 304 [0.01, 127.0.0.1:58256][0m
-2021-06-07 16:45:34,668---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 59598]
-2021-06-07 16:45:34,697---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 59598]
-2021-06-07 16:45:34,697---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 59598]
-2021-06-07 16:45:34,698---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 59598]
-2021-06-07 16:45:34,698---INFO---runserver.py---[mHTTP GET /placaList 200 [0.03, 127.0.0.1:59598][0m
-2021-06-07 16:45:34,733---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 59598]
-2021-06-07 16:45:34,736---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 59598]
-2021-06-07 16:45:34,738---DEBUG---http_protocol.py---HTTP response chunk for ['127.0.0.1', 59598]
-2021-06-07 16:45:34,739---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 59598]
-2021-06-07 16:45:34,741---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 59598]
-2021-06-07 16:45:34,742---INFO---runserver.py---[mHTTP GET /static/js/scripts.js 200 [0.01, 127.0.0.1:59598][0m
-2021-06-07 16:45:36,055---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 59598]
-2021-06-07 16:45:36,111---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 59598]
-2021-06-07 16:45:36,112---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 59598]
-2021-06-07 16:45:36,113---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 59598]
-2021-06-07 16:45:36,113---INFO---runserver.py---[mHTTP GET /placaList 200 [0.06, 127.0.0.1:59598][0m
-2021-06-07 16:45:36,153---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 59598]
-2021-06-07 16:45:36,157---DEBUG---http_protocol.py---HTTP 304 response started for ['127.0.0.1', 59598]
-2021-06-07 16:45:36,159---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 59598]
-2021-06-07 16:45:36,160---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 59598]
-2021-06-07 16:45:36,161---INFO---runserver.py---[36mHTTP GET /static/js/scripts.js 304 [0.01, 127.0.0.1:59598][0m
-2021-06-07 16:47:36,774---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 60594]
-2021-06-07 16:47:36,802---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 60594]
-2021-06-07 16:47:36,803---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 60594]
-2021-06-07 16:47:36,803---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 60594]
-2021-06-07 16:47:36,803---INFO---runserver.py---[mHTTP GET /placaList 200 [0.03, 127.0.0.1:60594][0m
-2021-06-07 16:47:36,838---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 60594]
-2021-06-07 16:47:36,840---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 60594]
-2021-06-07 16:47:36,842---DEBUG---http_protocol.py---HTTP response chunk for ['127.0.0.1', 60594]
-2021-06-07 16:47:36,843---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 60594]
-2021-06-07 16:47:36,843---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 60594]
-2021-06-07 16:47:36,843---INFO---runserver.py---[mHTTP GET /static/js/scripts.js 200 [0.01, 127.0.0.1:60594][0m
-2021-06-07 16:48:22,123---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 60594]
-2021-06-07 16:48:22,172---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 60594]
-2021-06-07 16:48:22,172---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 60594]
-2021-06-07 16:48:22,173---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 60594]
-2021-06-07 16:48:22,173---INFO---runserver.py---[mHTTP GET /placaList 200 [0.05, 127.0.0.1:60594][0m
-2021-06-07 16:48:22,212---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 60594]
-2021-06-07 16:48:22,214---DEBUG---http_protocol.py---HTTP 304 response started for ['127.0.0.1', 60594]
-2021-06-07 16:48:22,215---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 60594]
-2021-06-07 16:48:22,216---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 60594]
-2021-06-07 16:48:22,216---INFO---runserver.py---[36mHTTP GET /static/js/scripts.js 304 [0.00, 127.0.0.1:60594][0m
-2021-06-07 16:48:23,149---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 60594]
-2021-06-07 16:48:23,209---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 60594]
-2021-06-07 16:48:23,210---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 60594]
-2021-06-07 16:48:23,210---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 60594]
-2021-06-07 16:48:23,210---INFO---runserver.py---[mHTTP GET /placaList 200 [0.06, 127.0.0.1:60594][0m
-2021-06-07 16:48:24,060---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 60594]
-2021-06-07 16:48:24,098---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 60594]
-2021-06-07 16:48:24,098---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 60594]
-2021-06-07 16:48:24,099---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 60594]
-2021-06-07 16:48:24,099---INFO---runserver.py---[mHTTP GET /placaList 200 [0.04, 127.0.0.1:60594][0m
-2021-06-07 16:48:24,447---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 60594]
-2021-06-07 16:48:24,478---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 60594]
-2021-06-07 16:48:24,479---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 60594]
-2021-06-07 16:48:24,480---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 60594]
-2021-06-07 16:48:24,484---INFO---runserver.py---[mHTTP GET /placaList 200 [0.04, 127.0.0.1:60594][0m
-2021-06-07 16:48:25,029---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 60594]
-2021-06-07 16:48:25,074---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 60594]
-2021-06-07 16:48:25,075---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 60594]
-2021-06-07 16:48:25,075---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 60594]
-2021-06-07 16:48:25,075---INFO---runserver.py---[mHTTP GET /placaList 200 [0.05, 127.0.0.1:60594][0m
-2021-06-07 16:48:25,369---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 60594]
-2021-06-07 16:48:25,396---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 60594]
-2021-06-07 16:48:25,397---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 60594]
-2021-06-07 16:48:25,397---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 60594]
-2021-06-07 16:48:25,398---INFO---runserver.py---[mHTTP GET /placaList 200 [0.03, 127.0.0.1:60594][0m
-2021-06-07 16:48:25,688---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 60594]
-2021-06-07 16:48:25,716---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 60594]
-2021-06-07 16:48:25,717---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 60594]
-2021-06-07 16:48:25,717---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 60594]
-2021-06-07 16:48:25,717---INFO---runserver.py---[mHTTP GET /placaList 200 [0.03, 127.0.0.1:60594][0m
-2021-06-07 16:50:48,924---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 33920]
-2021-06-07 16:50:48,957---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 33920]
-2021-06-07 16:50:48,958---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 33920]
-2021-06-07 16:50:48,959---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 33920]
-2021-06-07 16:50:48,959---INFO---runserver.py---[mHTTP GET /placaList 200 [0.03, 127.0.0.1:33920][0m
-2021-06-07 16:50:48,990---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 33920]
-2021-06-07 16:50:48,992---DEBUG---http_protocol.py---HTTP 304 response started for ['127.0.0.1', 33920]
-2021-06-07 16:50:48,993---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 33920]
-2021-06-07 16:50:48,994---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 33920]
-2021-06-07 16:50:48,994---INFO---runserver.py---[36mHTTP GET /static/js/scripts.js 304 [0.00, 127.0.0.1:33920][0m
-2021-06-07 16:50:50,132---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 33920]
-2021-06-07 16:50:50,159---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 33920]
-2021-06-07 16:50:50,160---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 33920]
-2021-06-07 16:50:50,160---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 33920]
-2021-06-07 16:50:50,161---INFO---runserver.py---[mHTTP GET /placaList 200 [0.03, 127.0.0.1:33920][0m
-2021-06-07 16:50:51,339---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 33920]
-2021-06-07 16:50:51,373---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 33920]
-2021-06-07 16:50:51,374---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 33920]
-2021-06-07 16:50:51,375---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 33920]
-2021-06-07 16:50:51,375---INFO---runserver.py---[mHTTP GET /placaList 200 [0.04, 127.0.0.1:33920][0m
-2021-06-07 16:50:51,806---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 33920]
-2021-06-07 16:50:51,830---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 33920]
-2021-06-07 16:50:51,830---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 33920]
-2021-06-07 16:50:51,830---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 33920]
-2021-06-07 16:50:51,830---INFO---runserver.py---[mHTTP GET /placaList 200 [0.02, 127.0.0.1:33920][0m
-2021-06-07 16:50:52,114---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 33920]
-2021-06-07 16:50:52,141---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 33920]
-2021-06-07 16:50:52,142---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 33920]
-2021-06-07 16:50:52,142---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 33920]
-2021-06-07 16:50:52,142---INFO---runserver.py---[mHTTP GET /placaList 200 [0.03, 127.0.0.1:33920][0m
-2021-06-07 16:50:52,460---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 33920]
-2021-06-07 16:50:52,490---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 33920]
-2021-06-07 16:50:52,491---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 33920]
-2021-06-07 16:50:52,491---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 33920]
-2021-06-07 16:50:52,491---INFO---runserver.py---[mHTTP GET /placaList 200 [0.03, 127.0.0.1:33920][0m
-2021-06-07 16:50:52,811---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 33920]
-2021-06-07 16:50:52,841---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 33920]
-2021-06-07 16:50:52,841---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 33920]
-2021-06-07 16:50:52,841---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 33920]
-2021-06-07 16:50:52,842---INFO---runserver.py---[mHTTP GET /placaList 200 [0.03, 127.0.0.1:33920][0m
-2021-06-07 16:50:53,205---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 33920]
-2021-06-07 16:50:53,230---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 33920]
-2021-06-07 16:50:53,231---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 33920]
-2021-06-07 16:50:53,231---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 33920]
-2021-06-07 16:50:53,231---INFO---runserver.py---[mHTTP GET /placaList 200 [0.03, 127.0.0.1:33920][0m
-2021-06-07 16:50:53,551---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 33920]
-2021-06-07 16:50:53,578---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 33920]
-2021-06-07 16:50:53,579---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 33920]
-2021-06-07 16:50:53,579---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 33920]
-2021-06-07 16:50:53,579---INFO---runserver.py---[mHTTP GET /placaList 200 [0.03, 127.0.0.1:33920][0m
-2021-06-07 16:50:53,856---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 33920]
-2021-06-07 16:50:53,883---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 33920]
-2021-06-07 16:50:53,883---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 33920]
-2021-06-07 16:50:53,884---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 33920]
-2021-06-07 16:50:53,884---INFO---runserver.py---[mHTTP GET /placaList 200 [0.03, 127.0.0.1:33920][0m
-2021-06-07 16:50:54,213---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 33920]
-2021-06-07 16:50:54,238---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 33920]
-2021-06-07 16:50:54,239---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 33920]
-2021-06-07 16:50:54,239---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 33920]
-2021-06-07 16:50:54,239---INFO---runserver.py---[mHTTP GET /placaList 200 [0.03, 127.0.0.1:33920][0m
-2021-06-07 16:50:54,536---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 33920]
-2021-06-07 16:50:54,574---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 33920]
-2021-06-07 16:50:54,574---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 33920]
-2021-06-07 16:50:54,574---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 33920]
-2021-06-07 16:50:54,575---INFO---runserver.py---[mHTTP GET /placaList 200 [0.04, 127.0.0.1:33920][0m
-2021-06-07 16:50:54,919---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 33920]
-2021-06-07 16:50:54,947---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 33920]
-2021-06-07 16:50:54,948---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 33920]
-2021-06-07 16:50:54,948---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 33920]
-2021-06-07 16:50:54,948---INFO---runserver.py---[mHTTP GET /placaList 200 [0.03, 127.0.0.1:33920][0m
-2021-06-07 16:50:55,224---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 33920]
-2021-06-07 16:50:55,250---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 33920]
-2021-06-07 16:50:55,250---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 33920]
-2021-06-07 16:50:55,250---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 33920]
-2021-06-07 16:50:55,251---INFO---runserver.py---[mHTTP GET /placaList 200 [0.03, 127.0.0.1:33920][0m
-2021-06-07 16:58:36,400---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 37770]
-2021-06-07 16:58:36,427---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 37770]
-2021-06-07 16:58:36,427---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 37770]
-2021-06-07 16:58:36,427---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 37770]
-2021-06-07 16:58:36,427---INFO---runserver.py---[mHTTP GET /placaList 200 [0.03, 127.0.0.1:37770][0m
-2021-06-07 16:58:36,460---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 37770]
-2021-06-07 16:58:36,462---DEBUG---http_protocol.py---HTTP 304 response started for ['127.0.0.1', 37770]
-2021-06-07 16:58:36,463---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 37770]
-2021-06-07 16:58:36,464---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 37770]
-2021-06-07 16:58:36,465---INFO---runserver.py---[36mHTTP GET /static/style/style.css 304 [0.01, 127.0.0.1:37770][0m
-2021-06-07 16:58:36,468---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 37774]
-2021-06-07 16:58:36,473---DEBUG---http_protocol.py---HTTP 304 response started for ['127.0.0.1', 37774]
-2021-06-07 16:58:36,476---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 37774]
-2021-06-07 16:58:36,476---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 37774]
-2021-06-07 16:58:36,476---INFO---runserver.py---[36mHTTP GET /static/js/scripts.js 304 [0.01, 127.0.0.1:37774][0m
-2021-06-07 16:59:55,260---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 38406]
-2021-06-07 16:59:55,297---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 38406]
-2021-06-07 16:59:55,298---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 38406]
-2021-06-07 16:59:55,298---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 38406]
-2021-06-07 16:59:55,298---INFO---runserver.py---[mHTTP GET /placaList 200 [0.04, 127.0.0.1:38406][0m
-2021-06-07 16:59:55,342---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 38406]
-2021-06-07 16:59:55,343---DEBUG---http_protocol.py---HTTP 304 response started for ['127.0.0.1', 38406]
-2021-06-07 16:59:55,344---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 38406]
-2021-06-07 16:59:55,345---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 38406]
-2021-06-07 16:59:55,345---INFO---runserver.py---[36mHTTP GET /static/js/scripts.js 304 [0.00, 127.0.0.1:38406][0m
-2021-06-07 16:59:56,668---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 38406]
-2021-06-07 16:59:56,716---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 38406]
-2021-06-07 16:59:56,716---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 38406]
-2021-06-07 16:59:56,717---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 38406]
-2021-06-07 16:59:56,717---INFO---runserver.py---[mHTTP GET /placaList 200 [0.05, 127.0.0.1:38406][0m
-2021-06-07 17:05:27,489---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 41188]
-2021-06-07 17:05:27,549---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 41188]
-2021-06-07 17:05:27,550---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 41188]
-2021-06-07 17:05:27,550---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 41188]
-2021-06-07 17:05:27,551---INFO---runserver.py---[mHTTP GET /placaList 200 [0.06, 127.0.0.1:41188][0m
-2021-06-07 17:05:27,599---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 41188]
-2021-06-07 17:05:27,600---DEBUG---http_protocol.py---HTTP 304 response started for ['127.0.0.1', 41188]
-2021-06-07 17:05:27,602---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 41188]
-2021-06-07 17:05:27,602---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 41188]
-2021-06-07 17:05:27,602---INFO---runserver.py---[36mHTTP GET /static/js/scripts.js 304 [0.00, 127.0.0.1:41188][0m
-2021-06-07 17:08:29,319---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 41236]
-2021-06-07 17:08:29,359---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 41236]
-2021-06-07 17:08:29,359---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 41236]
-2021-06-07 17:08:29,359---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 41236]
-2021-06-07 17:08:29,360---INFO---runserver.py---[mHTTP GET /placaList 200 [0.04, 127.0.0.1:41236][0m
-2021-06-07 17:08:29,393---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 41236]
-2021-06-07 17:08:29,395---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 41236]
-2021-06-07 17:08:29,397---DEBUG---http_protocol.py---HTTP response chunk for ['127.0.0.1', 41236]
-2021-06-07 17:08:29,398---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 41236]
-2021-06-07 17:08:29,399---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 41236]
-2021-06-07 17:08:29,399---INFO---runserver.py---[mHTTP GET /static/js/scripts.js 200 [0.01, 127.0.0.1:41236][0m
-2021-06-07 17:09:10,780---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 41236]
-2021-06-07 17:09:10,809---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 41236]
-2021-06-07 17:09:10,810---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 41236]
-2021-06-07 17:09:10,810---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 41236]
-2021-06-07 17:09:10,810---INFO---runserver.py---[mHTTP GET /placaList 200 [0.03, 127.0.0.1:41236][0m
-2021-06-07 17:09:10,847---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 41236]
-2021-06-07 17:09:10,850---DEBUG---http_protocol.py---HTTP 304 response started for ['127.0.0.1', 41236]
-2021-06-07 17:09:10,852---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 41236]
-2021-06-07 17:09:10,852---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 41236]
-2021-06-07 17:09:10,852---INFO---runserver.py---[36mHTTP GET /static/js/scripts.js 304 [0.01, 127.0.0.1:41236][0m
-2021-06-07 17:09:24,663---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 41236]
-2021-06-07 17:09:24,696---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 41236]
-2021-06-07 17:09:24,697---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 41236]
-2021-06-07 17:09:24,697---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 41236]
-2021-06-07 17:09:24,697---INFO---runserver.py---[mHTTP GET /placaList 200 [0.03, 127.0.0.1:41236][0m
-2021-06-07 17:09:24,733---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 41236]
-2021-06-07 17:09:24,736---DEBUG---http_protocol.py---HTTP 304 response started for ['127.0.0.1', 41236]
-2021-06-07 17:09:24,738---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 41236]
-2021-06-07 17:09:24,738---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 41236]
-2021-06-07 17:09:24,738---INFO---runserver.py---[36mHTTP GET /static/js/scripts.js 304 [0.00, 127.0.0.1:41236][0m
-2021-06-07 17:09:46,868---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 41236]
-2021-06-07 17:09:46,902---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 41236]
-2021-06-07 17:09:46,903---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 41236]
-2021-06-07 17:09:46,903---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 41236]
-2021-06-07 17:09:46,903---INFO---runserver.py---[mHTTP GET /placaList 200 [0.03, 127.0.0.1:41236][0m
-2021-06-07 17:09:46,937---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 41236]
-2021-06-07 17:09:46,941---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 41236]
-2021-06-07 17:09:46,942---DEBUG---http_protocol.py---HTTP response chunk for ['127.0.0.1', 41236]
-2021-06-07 17:09:46,943---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 41236]
-2021-06-07 17:09:46,943---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 41236]
-2021-06-07 17:09:46,944---INFO---runserver.py---[mHTTP GET /static/js/scripts.js 200 [0.01, 127.0.0.1:41236][0m
-2021-06-07 17:11:44,436---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 42792]
-2021-06-07 17:11:44,461---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 42792]
-2021-06-07 17:11:44,462---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 42792]
-2021-06-07 17:11:44,462---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 42792]
-2021-06-07 17:11:44,462---INFO---runserver.py---[mHTTP GET /placaList 200 [0.03, 127.0.0.1:42792][0m
-2021-06-07 17:11:44,494---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 42792]
-2021-06-07 17:11:44,495---DEBUG---http_protocol.py---HTTP 304 response started for ['127.0.0.1', 42792]
-2021-06-07 17:11:44,497---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 42792]
-2021-06-07 17:11:44,498---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 42792]
-2021-06-07 17:11:44,499---INFO---runserver.py---[36mHTTP GET /static/js/scripts.js 304 [0.00, 127.0.0.1:42792][0m
-2021-06-07 17:13:44,692---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 43784]
-2021-06-07 17:13:44,730---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 43784]
-2021-06-07 17:13:44,730---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 43784]
-2021-06-07 17:13:44,730---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 43784]
-2021-06-07 17:13:44,730---INFO---runserver.py---[mHTTP GET /placaList 200 [0.04, 127.0.0.1:43784][0m
-2021-06-07 17:13:44,763---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 43784]
-2021-06-07 17:13:44,766---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 43788]
-2021-06-07 17:13:44,769---DEBUG---http_protocol.py---HTTP 304 response started for ['127.0.0.1', 43784]
-2021-06-07 17:13:44,771---DEBUG---http_protocol.py---HTTP 304 response started for ['127.0.0.1', 43788]
-2021-06-07 17:13:44,774---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 43784]
-2021-06-07 17:13:44,775---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 43784]
-2021-06-07 17:13:44,778---INFO---runserver.py---[36mHTTP GET /static/style/style.css 304 [0.02, 127.0.0.1:43784][0m
-2021-06-07 17:13:44,779---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 43788]
-2021-06-07 17:13:44,779---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 43788]
-2021-06-07 17:13:44,780---INFO---runserver.py---[36mHTTP GET /static/js/scripts.js 304 [0.01, 127.0.0.1:43788][0m
-2021-06-07 17:15:27,981---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 44668]
-2021-06-07 17:15:28,016---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 44668]
-2021-06-07 17:15:28,016---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 44668]
-2021-06-07 17:15:28,017---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 44668]
-2021-06-07 17:15:28,017---INFO---runserver.py---[mHTTP GET /placaList 200 [0.04, 127.0.0.1:44668][0m
-2021-06-07 17:15:28,051---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 44668]
-2021-06-07 17:15:28,053---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 44668]
-2021-06-07 17:15:28,055---DEBUG---http_protocol.py---HTTP response chunk for ['127.0.0.1', 44668]
-2021-06-07 17:15:28,056---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 44668]
-2021-06-07 17:15:28,057---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 44668]
-2021-06-07 17:15:28,057---INFO---runserver.py---[mHTTP GET /static/js/scripts.js 200 [0.01, 127.0.0.1:44668][0m
-2021-06-07 17:16:03,249---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 44668]
-2021-06-07 17:16:03,271---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 44668]
-2021-06-07 17:16:03,272---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 44668]
-2021-06-07 17:16:03,272---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 44668]
-2021-06-07 17:16:03,272---INFO---runserver.py---[mHTTP GET /placaList 200 [0.02, 127.0.0.1:44668][0m
-2021-06-07 17:16:03,307---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 44668]
-2021-06-07 17:16:03,308---DEBUG---http_protocol.py---HTTP 304 response started for ['127.0.0.1', 44668]
-2021-06-07 17:16:03,310---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 44668]
-2021-06-07 17:16:03,311---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 44668]
-2021-06-07 17:16:03,311---INFO---runserver.py---[36mHTTP GET /static/js/scripts.js 304 [0.00, 127.0.0.1:44668][0m
+2021-06-07 19:51:15,262---INFO---server.py---HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2021-06-07 19:51:15,262---INFO---server.py---Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2021-06-07 19:51:15,263---INFO---server.py---Listening on TCP address 127.0.0.1:8000
+2021-06-07 19:51:16,509---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 35702]
+2021-06-07 19:51:16,576---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 35702]
+2021-06-07 19:51:16,577---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 35702]
+2021-06-07 19:51:16,577---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 35702]
+2021-06-07 19:51:16,577---INFO---runserver.py---[mHTTP GET /placaList 200 [0.07, 127.0.0.1:35702][0m
+2021-06-07 19:51:16,618---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 35702]
+2021-06-07 19:51:16,622---DEBUG---http_protocol.py---HTTP 304 response started for ['127.0.0.1', 35702]
+2021-06-07 19:51:16,624---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 35702]
+2021-06-07 19:51:16,624---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 35702]
+2021-06-07 19:51:16,624---INFO---runserver.py---[36mHTTP GET /static/js/scripts.js 304 [0.01, 127.0.0.1:35702][0m
+2021-06-07 19:51:20,987---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 35702]
+2021-06-07 19:51:21,036---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 35702]
+2021-06-07 19:51:21,036---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 35702]
+2021-06-07 19:51:21,037---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 35702]
+2021-06-07 19:51:21,037---INFO---runserver.py---[mHTTP GET /placaList 200 [0.05, 127.0.0.1:35702][0m
+2021-06-07 19:51:34,927---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 35866]
+2021-06-07 19:51:34,941---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 35866]
+2021-06-07 19:51:34,941---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 35866]
+2021-06-07 19:51:34,942---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 35866]
+2021-06-07 19:51:34,942---INFO---runserver.py---[mHTTP GET /placaList 200 [0.02, 127.0.0.1:35866][0m
+2021-06-07 19:51:34,983---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 35866]
+2021-06-07 19:51:34,983---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 35870]
+2021-06-07 19:51:34,986---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 35866]
+2021-06-07 19:51:34,990---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 35870]
+2021-06-07 19:51:34,990---DEBUG---http_protocol.py---HTTP response chunk for ['127.0.0.1', 35866]
+2021-06-07 19:51:34,992---DEBUG---http_protocol.py---HTTP response chunk for ['127.0.0.1', 35870]
+2021-06-07 19:51:34,993---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 35866]
+2021-06-07 19:51:34,994---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 35866]
+2021-06-07 19:51:34,994---INFO---runserver.py---[mHTTP GET /static/style/style.css 200 [0.01, 127.0.0.1:35866][0m
+2021-06-07 19:51:34,995---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 35870]
+2021-06-07 19:51:34,995---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 35870]
+2021-06-07 19:51:34,996---INFO---runserver.py---[mHTTP GET /static/js/scripts.js 200 [0.01, 127.0.0.1:35870][0m
+2021-06-07 19:51:35,579---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 35870]
+2021-06-07 19:51:35,582---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 35870]
+2021-06-07 19:51:35,583---DEBUG---http_protocol.py---HTTP response chunk for ['127.0.0.1', 35870]
+2021-06-07 19:51:35,585---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 35870]
+2021-06-07 19:51:35,585---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 35870]
+2021-06-07 19:51:35,585---INFO---runserver.py---[mHTTP GET /static/images/logo-uff.png 200 [0.01, 127.0.0.1:35870][0m
+2021-06-07 19:51:36,742---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 35870]
+2021-06-07 19:51:36,794---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 35870]
+2021-06-07 19:51:36,794---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 35870]
+2021-06-07 19:51:36,794---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 35870]
+2021-06-07 19:51:36,794---INFO---runserver.py---[mHTTP GET /accounts/login/ 200 [0.05, 127.0.0.1:35870][0m
+2021-06-07 19:51:42,690---DEBUG---http_protocol.py---HTTP b'POST' request for ['127.0.0.1', 35870]
+2021-06-07 19:51:42,890---DEBUG---http_protocol.py---HTTP 302 response started for ['127.0.0.1', 35870]
+2021-06-07 19:51:42,890---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 35870]
+2021-06-07 19:51:42,890---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 35870]
+2021-06-07 19:51:42,890---INFO---runserver.py---[32mHTTP POST /accounts/login/ 302 [0.20, 127.0.0.1:35870][0m
+2021-06-07 19:51:42,893---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 35870]
+2021-06-07 19:51:42,895---DEBUG---http_protocol.py---HTTP 301 response started for ['127.0.0.1', 35870]
+2021-06-07 19:51:42,895---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 35870]
+2021-06-07 19:51:42,895---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 35870]
+2021-06-07 19:51:42,896---INFO---runserver.py---[32mHTTP GET /monitor 301 [0.00, 127.0.0.1:35870][0m
+2021-06-07 19:51:42,898---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 35870]
+2021-06-07 19:51:42,933---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 35870]
+2021-06-07 19:51:42,933---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 35870]
+2021-06-07 19:51:42,933---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 35870]
+2021-06-07 19:51:42,933---INFO---runserver.py---[mHTTP GET /monitor/ 200 [0.04, 127.0.0.1:35870][0m
+2021-06-07 19:51:42,959---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 35870]
+2021-06-07 19:51:42,960---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 35866]
+2021-06-07 19:51:42,962---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 35870]
+2021-06-07 19:51:42,962---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 35866]
+2021-06-07 19:51:42,963---DEBUG---http_protocol.py---HTTP response chunk for ['127.0.0.1', 35870]
+2021-06-07 19:51:42,964---DEBUG---http_protocol.py---HTTP response chunk for ['127.0.0.1', 35866]
+2021-06-07 19:51:42,965---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 35870]
+2021-06-07 19:51:42,969---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 35870]
+2021-06-07 19:51:42,969---INFO---runserver.py---[mHTTP GET /static/js/utils.js 200 [0.01, 127.0.0.1:35870][0m
+2021-06-07 19:51:42,970---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 35866]
+2021-06-07 19:51:42,972---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 35866]
+2021-06-07 19:51:42,973---INFO---runserver.py---[mHTTP GET /static/js/map.js 200 [0.01, 127.0.0.1:35866][0m
+2021-06-07 19:51:43,483---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 35866]
+2021-06-07 19:51:43,485---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 35866]
+2021-06-07 19:51:43,486---DEBUG---http_protocol.py---HTTP response chunk for ['127.0.0.1', 35866]
+2021-06-07 19:51:43,488---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 35866]
+2021-06-07 19:51:43,488---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 35866]
+2021-06-07 19:51:43,488---INFO---runserver.py---[mHTTP GET /static/data/city.json 200 [0.00, 127.0.0.1:35866][0m
+2021-06-07 19:51:43,490---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 35866]
+2021-06-07 19:51:43,491---INFO---runserver.py---WebSocket HANDSHAKING /monitor/ [127.0.0.1:35960]
+2021-06-07 19:51:43,492---DEBUG---http_protocol.py---Upgraded connection ['127.0.0.1', 35960] to WebSocket
+2021-06-07 19:51:43,493---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 35866]
+2021-06-07 19:51:43,495---DEBUG---http_protocol.py---HTTP response chunk for ['127.0.0.1', 35866]
+2021-06-07 19:51:43,496---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 35866]
+2021-06-07 19:51:43,496---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 35866]
+2021-06-07 19:51:43,497---INFO---runserver.py---[mHTTP GET /static/images/icons/camera-red.png 200 [0.01, 127.0.0.1:35866][0m
+2021-06-07 19:51:43,532---DEBUG---connection.py---Creating tcp connection to ('127.0.0.1', 6379)
+2021-06-07 19:51:43,532---DEBUG---connection.py---Creating tcp connection to ('127.0.0.1', 6379)
+2021-06-07 19:51:43,536---DEBUG---ws_protocol.py---WebSocket ['127.0.0.1', 35960] open and established
+2021-06-07 19:51:43,536---INFO---runserver.py---WebSocket CONNECT /monitor/ [127.0.0.1:35960]
+2021-06-07 19:51:43,536---DEBUG---ws_protocol.py---WebSocket ['127.0.0.1', 35960] accepted by application
+2021-06-07 19:51:43,538---DEBUG---ws_protocol.py---Sent WebSocket packet to client for ['127.0.0.1', 35960]
+2021-06-07 19:51:44,006---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 35866]
+2021-06-07 19:51:44,007---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 35866]
+2021-06-07 19:51:44,008---DEBUG---http_protocol.py---HTTP response chunk for ['127.0.0.1', 35866]
+2021-06-07 19:51:44,009---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 35866]
+2021-06-07 19:51:44,010---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 35866]
+2021-06-07 19:51:44,010---INFO---runserver.py---[mHTTP GET /static/images/icons/camera-white.png 200 [0.00, 127.0.0.1:35866][0m
+2021-06-07 19:51:45,400---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 35866]
+2021-06-07 19:51:45,444---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 35866]
+2021-06-07 19:51:45,444---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 35866]
+2021-06-07 19:51:45,444---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 35866]
+2021-06-07 19:51:45,444---INFO---runserver.py---[mHTTP GET /placaList 200 [0.04, 127.0.0.1:35866][0m
+2021-06-07 19:51:45,453---DEBUG---ws_protocol.py---WebSocket closed for ['127.0.0.1', 35960]
+2021-06-07 19:51:45,453---INFO---runserver.py---WebSocket DISCONNECT /monitor/ [127.0.0.1:35960]
+2021-06-07 19:51:45,453---DEBUG---connection.py---Cancelling waiter (<Future cancelled>, [None, None])
+2021-06-07 19:51:45,454---DEBUG---util.py---Waiter future is already done <Future cancelled>
+2021-06-07 19:51:45,523---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 35866]
+2021-06-07 19:51:45,525---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 35866]
+2021-06-07 19:51:45,527---DEBUG---http_protocol.py---HTTP response chunk for ['127.0.0.1', 35866]
+2021-06-07 19:51:45,528---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 35866]
+2021-06-07 19:51:45,528---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 35866]
+2021-06-07 19:51:45,528---INFO---runserver.py---[mHTTP GET /static/js/dynamitable.jquery.min.js 200 [0.01, 127.0.0.1:35866][0m

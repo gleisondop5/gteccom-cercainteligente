@@ -3,13 +3,13 @@
 {% load l10n %}
 {% block title %}Monitora UFF{% endblock %}
 
-{% block style %}<link rel="stylesheet" href="{% static 'style/style.css' %}">{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'style/style.css' %}">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+{% endblock %}
 
 {% block script %}
-	<!-- jQuery e Tablesorter -->
-	<script src="{% static 'js/jquery-latest.js' %}"></script>
-	<script src="{% static 'js/jquery.tablesorter.min.js' %}"></script>
-	<!-- Meu script -->
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script> 
 	<script src="{% static 'js/scripts.js' %}"></script>
 {% endblock %}
 
@@ -17,49 +17,102 @@
 
 {% if user.is_authenticated %}
 
-<table class="tablesorter" id="tablesorter">
-	<thead>
-		<tr>
-			<th>Campi</th>
-			<th>Ponto de controle</th>
-			<th>Endereço</th>
-			<th>Longitude</th>
-			<th>Latitude</th>
-			<th>Tag-Slug</th>
-            <th>Direção</th>
-            <th>Placa</th>
-            <th>Data e hora</th>
-		</tr>
-        <tr>
-            <th><input type="text" id="txtColuna1"/></th>
-            <th><input type="text" id="txtColuna2"/></th>
-            <th><input type="text" id="txtColuna3"/></th>
-            <th><input type="text" id="txtColuna4"/></th>
-            <th><input type="text" id="txtColuna5"/></th>
-            <th><input type="text" id="txtColuna6"/></th>
-            <th><input type="text" id="txtColuna7"/></th>
-            <th><input type="text" id="txtColuna8"/></th>
-            <th><input type="text" id="txtColuna9"/></th>
-        </tr> 
+<div>
+    <div class="table-responsive"> 
+        <table class="js-dynamitable table table-bordered" id="tablesorter">
+            <thead>
+                <tr>
+                    <th>
+                        Campi
+                        <span class="js-sorter-desc glyphicon glyphicon-chevron-down pull-right"></span> 
+                        <span class="js-sorter-asc glyphicon glyphicon-chevron-up pull-right"></span>
+                    </th>
+                    <th>
+                        Ponto de controle
+                        <span class="js-sorter-desc glyphicon glyphicon-chevron-down pull-right"></span> 
+                        <span class="js-sorter-asc glyphicon glyphicon-chevron-up pull-right"></span>
+                    </th>
+                    <th>
+                        Endereço
+                        <span class="js-sorter-desc glyphicon glyphicon-chevron-down pull-right"></span> 
+                        <span class="js-sorter-asc glyphicon glyphicon-chevron-up pull-right"></span>
+                    </th>
+                    <th>
+                        Longitude
+                        <span class="js-sorter-desc glyphicon glyphicon-chevron-down pull-right"></span> 
+                        <span class="js-sorter-asc glyphicon glyphicon-chevron-up pull-right"></span>
+                    </th>
+                    <th>
+                        Latitude
+                        <span class="js-sorter-desc glyphicon glyphicon-chevron-down pull-right"></span> 
+                        <span class="js-sorter-asc glyphicon glyphicon-chevron-up pull-right"></span>
+                    </th>
+                    <th>
+                        Tag-Slug
+                        <span class="js-sorter-desc glyphicon glyphicon-chevron-down pull-right"></span> 
+                        <span class="js-sorter-asc glyphicon glyphicon-chevron-up pull-right"></span>
+                    </th>
+                    <th>
+                        Direção
+                        <span class="js-sorter-desc glyphicon glyphicon-chevron-down pull-right"></span> 
+                        <span class="js-sorter-asc glyphicon glyphicon-chevron-up pull-right"></span>
+                    </th>
+                    <th>
+                        Placa
+                        <span class="js-sorter-desc glyphicon glyphicon-chevron-down pull-right"></span> 
+                        <span class="js-sorter-asc glyphicon glyphicon-chevron-up pull-right"></span>
+                    </th>
+                    <th>
+                        Data e hora
+                        <span class="js-sorter-desc glyphicon glyphicon-chevron-down pull-right"></span> 
+                        <span class="js-sorter-asc glyphicon glyphicon-chevron-up pull-right"></span>
+                    </th>
+                </tr>
+                <tr>
+                    <th><input class="js-filter form-control" type="text" value=""></th>
+                    <th><input class="js-filter form-control" type="text" value=""></th>
+                    <th><input class="js-filter form-control" type="text" value=""></th>
+                    <th><input class="js-filter form-control" type="text" value=""></th>
+                    <th><input class="js-filter form-control" type="text" value=""></th>
+                    <th><input class="js-filter form-control" type="text" value=""></th>
+                    <th><input class="js-filter form-control" type="text" value=""></th>
+                    <th><input class="js-filter form-control" type="text" value=""></th>
+                    <th><input class="js-filter form-control" type="text" value=""></th>
+                </tr> 
+            </thead>
+            <tbody>
+                <tr>
+                    {% for placa in placa_list %}
+                            <td>{{ placa.layer }}</td>
+                            <td>{{ placa.name }}</td>
+                            <td>{{ placa.address }}</td>
+                            <td>{{ placa.latitude }}</td>
+                            <td>{{ placa.longitude }}</td>
+                            <td>{{ placa.tag_slug }}</td>
+                            <td>{{ placa.direction }}</td>
+                            <td>{{ placa.license_plate }}</td>
+                            <td>{{ placa.detection_date }}</td>
+                            </tr>
+                    {% endfor %}</tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+  
+<script src="{% static 'js/dynamitable.jquery.min.js' %}"></script>
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36251023-1']);
+    _gaq.push(['_setDomainName', 'jqueryscript.net']);
+    _gaq.push(['_trackPageview']);
 
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
 
-	</thead>
-    <tbody>
-		<tr>
-            {% for placa in placa_list %}
-                    <td>{{ placa.layer }}</td>
-                    <td>{{ placa.name }}</td>
-                    <td>{{ placa.address }}</td>
-                    <td>{{ placa.latitude }}</td>
-                    <td>{{ placa.longitude }}</td>
-                    <td>{{ placa.tag_slug }}</td>
-                    <td>{{ placa.direction }}</td>
-                    <td>{{ placa.license_plate }}</td>
-                    <td>{{ placa.detection_date }}</td>
-                    </tr>
-            {% endfor %}</tr>
-	</tbody>
-</table>
 {% else %}
 <h1>Acesso não autorizado</h1>
 <h2>Realize o login</h2>

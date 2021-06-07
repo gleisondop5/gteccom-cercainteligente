@@ -1,3 +1,5 @@
+/*
+
 $(function(){
     $("#tablesorter input").keyup(function(){       
         var index = $(this).parent().index();
@@ -18,7 +20,7 @@ $(function(){
 
 
 
-/*
+
 
 $(function(){
 	// Parser para configurar a data para o formato do Brasil
