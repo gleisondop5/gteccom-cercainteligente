@@ -20,14 +20,21 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    #'monitor.apps.MonitorConfig',
+    # django apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'monitor', 
+    'django.contrib.sites',
+    #3rd party 
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    "crispy_forms",
+    # local apps
+    'monitor.apps.MonitorConfig', 
     'channels'
 ]
 
@@ -46,7 +53,7 @@ ROOT_URLCONF = 'cercainteligente.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR/"monitor"/"templates"/"monitor"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -126,3 +133,31 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# django-allauth
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
+SITE_ID = 1
+# altera o direcionamento apos o login para raiz
+LOGIN_REDIRECT_URL = "/monitor"
+ACCOUNT_SESSION_REMEMBER = True
+#confirma o email pelo terminal. Em produção o usuário receberia um email de confirmação
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+# Só precisa digitar a senha uma vez
+ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
+# Não precisa de username
+ACCOUNT_USERNAME_REQUIRED = False
+# Método de autenticação: email
+ACCOUNT_AUTHENTICATION_METHOD = "email"
+# Email obrigatório
+ACCOUNT_EMAIL_REQUIRED = True
+# Email único
+ACCOUNT_UNIQUE_EMAIL = True
+
+
+# django-crispy-forms
+CRISPY_TEMPLATE_PACK = "bootstrap4"

@@ -6,7 +6,7 @@ from django.http import HttpResponse, JsonResponse, StreamingHttpResponse, HttpR
 from django.template import loader
 from django.views.decorators import gzip
 from queue import Queue, Full, Empty
-from .models import Layer, ControlPoint, Camera
+from .models import Layer, ControlPoint, Camera, DetectedLicensePlate
 
 
 log_format = '%(asctime)s---%(levelname)s---%(filename)s---%(message)s'
@@ -21,9 +21,14 @@ logger = logging.getLogger('root')
 
 video_streams = dict()
 
-def test(request):
-	return render(request, "monitor/test.html")
 
+def home(request):
+    context = {
+        'layer_list': Layer.objects.all(),
+        'controlpoint_list': ControlPoint.objects.all(),
+        'camera_list': Camera.objects.all().order_by('controlpoint', 'direction', 'tag_slug'),
+    }
+    return render(request, "monitor/home.html", context)
 
 def index(request):
     context = {
@@ -32,6 +37,67 @@ def index(request):
         'camera_list': Camera.objects.all().order_by('controlpoint', 'direction', 'tag_slug'),
     }
     return render(request, "monitor/index.html", context)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def placaListView(request):
+    
+    placa_list = Camera.objects.raw('SELECT layer.name as layer, controlpoint.name, controlpoint.address, controlpoint.latitude, controlpoint.longitude, camera.tag_slug, camera.direction, camera.ID, placa.license_plate, placa.detection_date ' 
+                            'FROM monitor_layer as layer, monitor_controlpoint as controlpoint, monitor_camera as camera, monitor_detectedlicenseplate as placa ' 
+                            'WHERE layer.id = controlpoint.layer_id and controlpoint.id = camera.controlpoint_id and camera.id = placa.camera_id')
+    
+    
+    
+
+
+
+
+
+
+
+    context = {
+        'placa_list': placa_list,
+        
+    }
+    return render(request, "monitor/placaList.html", context)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 def rtsp_panel(request, controlpoint_id, monitor_id):

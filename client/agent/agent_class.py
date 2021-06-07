@@ -72,15 +72,9 @@ class Agent:
                         if open_callback is not None: yield from open_callback(self, {})
                         while self._keep_running and not self._ws.closed:
                             msg = yield from self._ws.recv()
-                            #self.logger.debug('\tmsg = %s' % msg)
                             data = json.loads(msg)
-                            #self.logger.debug('\tdata = %s' % data)
-                            payload = data['payload']
-                            self.logger.debug('\tpayload = %s' % payload)
-                            callback = communication.CALLBACKS.get(payload['event'])
-                            self.logger.debug('\tcallback = %s' % callback)
-                            self._ws.send('testando')
-                            if callback is not None and payload.get('message', self.tag_slug) == self.tag_slug: yield from callback(self, payload)
+                            callback = communication.CALLBACKS.get(data['type'])
+                            if callback is not None and data.get('target', self.tag_slug) == self.tag_slug: yield from callback(self, data)
                         self.logger.info('%s\twebsocket - closed' % self.tag_slug)
                     finally:
                         if close_callback is not None: yield from close_callback(self, {})
