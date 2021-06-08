@@ -21,39 +21,16 @@ logger = logging.getLogger('root')
 
 video_streams = dict()
 
+def index(request):    
+    return render(request, "monitor/index.html")
 
-def home(request):
+def monitor(request):
     context = {
         'layer_list': Layer.objects.all(),
         'controlpoint_list': ControlPoint.objects.all(),
         'camera_list': Camera.objects.all().order_by('controlpoint', 'direction', 'tag_slug'),
     }
-    return render(request, "monitor/home.html", context)
-
-def index(request):
-    context = {
-        'layer_list': Layer.objects.all(),
-        'controlpoint_list': ControlPoint.objects.all(),
-        'camera_list': Camera.objects.all().order_by('controlpoint', 'direction', 'tag_slug'),
-    }
-    return render(request, "monitor/index.html", context)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    return render(request, "monitor/monitor.html", context)
 
 
 def placaListView(request):
@@ -62,42 +39,10 @@ def placaListView(request):
                             'FROM monitor_layer as layer, monitor_controlpoint as controlpoint, monitor_camera as camera, monitor_detectedlicenseplate as placa ' 
                             'WHERE layer.id = controlpoint.layer_id and controlpoint.id = camera.controlpoint_id and camera.id = placa.camera_id')
     
-    
-    
-
-
-
-
-
-
-
     context = {
         'placa_list': placa_list,
-        
     }
     return render(request, "monitor/placaList.html", context)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 def rtsp_panel(request, controlpoint_id, monitor_id):

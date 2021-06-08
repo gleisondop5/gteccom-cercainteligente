@@ -143,7 +143,7 @@ AUTHENTICATION_BACKENDS = [
 
 SITE_ID = 1
 # altera o direcionamento apos o login para raiz
-LOGIN_REDIRECT_URL = "/monitor"
+LOGIN_REDIRECT_URL = "/monitoramento"
 ACCOUNT_SESSION_REMEMBER = True
 #confirma o email pelo terminal. Em produção o usuário receberia um email de confirmação
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"

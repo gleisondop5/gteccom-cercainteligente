@@ -7,5 +7,4 @@ urlpatterns = [
     # user management
     path('accounts/', include('allauth.urls')),
     path("", include("monitor.urls", namespace="monitor")),
-    path('monitor/', include('monitor.urls')),
 ]

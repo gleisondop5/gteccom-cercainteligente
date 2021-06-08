@@ -23,9 +23,12 @@
             <div class="naveg">
                 <ul class="naveg-nav">
                     <li class="naveg-item">
-                        <a class="naveg-link" href="{% url 'monitor:home' %}">Início</a>
+                        <a class="naveg-link" href="{% url 'monitor:index' %}">Início</a>
                     </li>
                     {% if user.is_authenticated %}
+                    <li class="naveg-item">
+                        <a class="naveg-link" href="{% url 'monitor:monitoramento' %}">Monitor</a>
+                    </li>
                     <li class="naveg-item">
                         <a class="naveg-link" href="{% url 'monitor:placaList' %}">Base de dados</a>
                     </li>
