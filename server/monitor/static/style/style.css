@@ -1,28 +1,85 @@
-#map-canvas {
-    overflow: hidden; 
-    position: absolute; 
-    top: 80px; 
-    right: 0; 
-    bottom: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%
+.marcas{
+    margin-top: -17px;
+    height: 90px;
+    width: 100%;
+    background-color: #0a1649;
 }
 
-#logo{
+.logo{
     position: absolute; 
     width: 12%; 
-    margin-left: -340px; 
+    margin-top: 23px;
+    margin-left: 5px; 
 }
 
 .marca{
-    margin-left: 30%; 
+    position: absolute;
+    margin-top: 23px;
+    margin-left: 42%; 
     color: rgb(253, 255, 250);
     font-weight: bolder;
     font-size: 32pt;
 }
 
+.naveg{
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    margin-top: 89px;
+    border: 3px solid #0a1649;
+    font-weight: bolder;
+}
+
+.naveg-nav{
+    list-style: none;
+    margin-left: 37%;
+    color: #0a1649;
+    margin-top: 3px;
+    
+}
+
+.naveg-item{
+    display: inline-block;
+    color: #0a1649;
+    font-size: 15pt;
+    padding-left: 40px;
+}
+
+.naveg-link{
+    text-decoration: none;
+}
+
+#map-canvas {
+    overflow: hidden; 
+    position: absolute; 
+    top: 112px; 
+    right: 0; 
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 88.05%
+}
+
 #tablesorter {
+    position: absolute; 
+    top: 112px; 
 	text-align: center;
+    margin-left: -700px;
+}
+
+.naoAutorizado{
+    margin-top: 100px;
+    text-align: center;
+}
+
+.naoAutorizado h1{
+    font-size: 42pt;
+}
+
+.conteudo{
+    margin-top: 100px;
+    text-align: center;
+    width: 25%;
+    margin-left: 700px;
 }
 

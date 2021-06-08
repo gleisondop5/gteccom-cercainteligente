@@ -3,7 +3,6 @@
 {% load l10n %}
 {% block title %}Monitora UFF{% endblock %}
 
-{% block style %}<link rel="stylesheet" href="{% static 'style/style.css' %}">{% endblock %}
 {% block script %}
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="{% static 'js/utils.js' %}"></script>
@@ -64,8 +63,12 @@
 {% if user.is_authenticated %}
 <div class="w3-padding-large" id="map-canvas"></div>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkGYZPNefP8ERD-xS1y_2RTHPxn-rFSdE&callback=initMap"></script>
+
 {% else %}
-<h1>Acesso não autorizado</h1>
-<h2>Realize o login</h2>
+<div class="naoAutorizado">
+    <h1>Acesso não autorizado</h1>
+    <h2>Realize o login</h2>
+</div>
+
 {% endif %}
 {% endblock %}

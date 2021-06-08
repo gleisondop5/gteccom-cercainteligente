@@ -5,34 +5,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <title>{% block title %}{% endblock %}</title>
-    
+    <link rel="stylesheet" href="{% static 'style/style.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     {% block style %}{% endblock %}
     {% block script %}{% endblock %}
 </head>
 
-
 <body>
     <header>
-        <nav class="navbar navbar-expand navbar-dark bg-dark mb-3">
-            <div class="container">
-                <img src="{% static 'images/logo-uff.png' %}" id="logo">
-                <a class="marca" href="{% url 'monitor:home' %}">Monitora UFF</a>
-                <ul class="navbar-nav">
-                    {% if user.is_authenticated %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'monitor:placaList' %}">Base de dados</a>
+        <nav class="marcas">
+            <div>
+                <img class="logo" src="{% static 'images/logo-uff.png' %}">
+                <h1 class="marca">Monitora UFF</h1>
+                
+            </div>
+            <div class="naveg">
+                <ul class="naveg-nav">
+                    <li class="naveg-item">
+                        <a class="naveg-link" href="{% url 'monitor:home' %}">Início</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_logout' %}">Sair</a>
+                    {% if user.is_authenticated %}
+                    <li class="naveg-item">
+                        <a class="naveg-link" href="{% url 'monitor:placaList' %}">Base de dados</a>
+                    </li>
+                    <li class="naveg-item">
+                        <a class="naveg-link" href="{% url 'account_logout' %}">Sair</a>
                     </li>
                     {% else %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_login' %}">Entrar</a>
+                    <li class="naveg-item">
+                        <a class="naveg-link" href="{% url 'account_login' %}">Entrar</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_signup' %}">Cadastro</a>
+                    <li class="naveg-item">
+                        <a class="naveg-link" href="{% url 'account_signup' %}">Cadastro</a>
                     </li>
                     {% endif %}
                 </ul>
@@ -40,7 +45,7 @@
         </nav>
     </header>
 
-    <main class="container"></main>
+    <main class="conteudo">
         {% block content %}
         {% endblock %}
     </main>
