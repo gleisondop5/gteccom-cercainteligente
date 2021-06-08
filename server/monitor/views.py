@@ -45,6 +45,18 @@ def placaListView(request):
     return render(request, "monitor/placaList.html", context)
 
 
+def admin(request):
+    context = {
+        'layer_list': Layer.objects.all(),
+        'controlpoint_list': ControlPoint.objects.all(),
+        'camera_list': Camera.objects.all().order_by('controlpoint', 'direction', 'tag_slug'),
+    }
+    return render(request, "monitor/admin.html", context)
+
+def layer(request):
+    return render(request, "monitor/layer.html")
+
+
 def rtsp_panel(request, controlpoint_id, monitor_id):
     context = {
         'monitor_id': monitor_id,

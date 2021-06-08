@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load l10n %}
+{% block title %}Monitora UFF{% endblock %}
+
+{% block content %}
+<main class="admin">
+    <div class="layer">
+        <h1>Layer</h1>
+        <p><a class="" href="{% url 'monitor:index' %}">+ Adicionar</a></p>
+        <div class=""> 
+            <table class="js-dynamitable table table-bordered" id="tablelayer">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Editar</th>
+                        <th>Excluir</th>
+                    </tr>
+                
+                </thead>
+                <tbody>
+                    <tr>
+                        {% for layer in layer_list %}
+                                <td>{{ layer.name }}</td>
+                                <td><img class="editar" src="{% static 'images/editar.png' %}"></td>
+                                <td><img class="del" src="{% static 'images/del.png' %}"></td>
+                                </tr>
+                        {% endfor %}</tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="controlPoint">
+        <h1>Pontos de controle</h1>
+        <p><a class="" href="{% url 'monitor:index' %}">+ Adicionar</a></p>
+        <div class="table-responsive"> 
+            <table class="js-dynamitable table table-bordered" id="tablecontrolpoint">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Address</th>
+                        <th>Latitude</th>
+                        <th>Longitude</th>
+                        <th>Layer</th>
+                        <th>Editar</th>
+                        <th>Excluir</th>
+                    </tr>
+                
+                </thead>
+                <tbody>
+                    <tr>
+                        {% for controlpoint in controlpoint_list %}
+                                <td>{{ controlpoint.name }}</td>
+                                <td>{{ controlpoint.address }}</td>
+                                <td>{{ controlpoint.latitude }}</td>
+                                <td>{{ controlpoint.longitude }}</td>
+                                <td>{{ controlpoint.layer }}</td>
+                                <td><img class="editar" src="{% static 'images/editar.png' %}"></td>
+                                <td><img class="del" src="{% static 'images/del.png' %}"></td>
+                                </tr>
+                        {% endfor %}</tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="cam">
+        <h1>Câmeras</h1>
+        <p><a class="" href="{% url 'monitor:index' %}">+ Adicionar</a></p>
+        <div class="table-responsive"> 
+            <table class="js-dynamitable table table-bordered" id="tablecam">
+                <thead>
+                    <tr>
+                        <th>tag_slug</th>
+                        <th>Direção</th>
+                        <th>Modelo</th>
+                        <th>rtsp_url</th>
+                        <th>agent_user</th>
+                        <th>agent_server</th>
+                        <th>controlpoint</th>
+                        <th>Editar</th>
+                        <th>Excluir</th>
+                    </tr>
+                
+                </thead>
+                <tbody>
+                    <tr>
+                        {% for camera in camera_list %}
+                                <td>{{ camera.tag_slug }}</td>
+                                <td>{{ camera.direction }}</td>
+                                <td>{{ camera.model }}</td>
+                                <td>{{ camera.rtsp_url }}</td>
+                                <td>{{ camera.agent_user }}</td>
+                                <td>{{ camera.agent_server }}</td>
+                                <td>{{ camera.controlpoint }}</td>
+                                <td><img class="editar" src="{% static 'images/editar.png' %}"></td>
+                                <td><img class="del" src="{% static 'images/del.png' %}"></td>
+                                </tr>
+                        {% endfor %}</tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>
+{% endblock %}

@@ -106,3 +106,27 @@
 .monitor{
     width: 100%;
 }
+
+/********PÁGINA DE ADMIN******/
+.admin{
+    position: absolute;
+    width: 90%;
+    margin-left: -600px;
+}
+
+.layer{
+    width: 400px;
+    margin-left: 620px;
+}
+
+#tablecontrolpoint{
+    width: 100%;
+}
+
+.controlPoint h1, .cam h1{
+    padding-top: 10px;
+}
+
+.add{
+    
+}
