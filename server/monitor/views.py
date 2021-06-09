@@ -1,5 +1,5 @@
 import cv2, json, numpy, os, threading, time, logging
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from channels.layers import get_channel_layer
 from django.conf import settings
 from django.http import HttpResponse, JsonResponse, StreamingHttpResponse, HttpResponseServerError
@@ -7,6 +7,7 @@ from django.template import loader
 from django.views.decorators import gzip
 from queue import Queue, Full, Empty
 from .models import Layer, ControlPoint, Camera, DetectedLicensePlate
+from .forms import LayerForm, ControlpointForm, CameraForm
 
 
 log_format = '%(asctime)s---%(levelname)s---%(filename)s---%(message)s'
@@ -53,8 +54,39 @@ def admin(request):
     }
     return render(request, "monitor/admin.html", context)
 
-def layer(request):
-    return render(request, "monitor/layer.html")
+def add_layer(request):
+    if request.method == "POST":
+        form = LayerForm(request.POST)
+        if form.is_valid():
+            layer = form.save(commit=False)
+            layer.save()
+            return redirect('/administracao')
+    else:    
+        form = LayerForm()
+        return render(request, "monitor/add_layer.html", {'form': form})
+
+
+def add_controlpoint(request):
+    if request.method == "POST":
+        form = ControlpointForm(request.POST)
+        if form.is_valid():
+            controlpoint = form.save(commit=False)
+            controlpoint.save()
+            return redirect('/administracao')
+    else:    
+        form = ControlpointForm()
+        return render(request, "monitor/add_controlpoint.html", {'form': form})
+
+def add_camera(request):
+    if request.method == "POST":
+        form = CameraForm(request.POST)
+        if form.is_valid():
+            camera = form.save(commit=False)
+            camera.save()
+            return redirect('/administracao')
+    else:    
+        form = CameraForm()
+        return render(request, "monitor/add_camera.html", {'form': form})
 
 
 def rtsp_panel(request, controlpoint_id, monitor_id):

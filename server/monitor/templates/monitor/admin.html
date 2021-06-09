@@ -7,7 +7,7 @@
 <main class="admin">
     <div class="layer">
         <h1>Layer</h1>
-        <p><a class="" href="{% url 'monitor:index' %}">+ Adicionar</a></p>
+        <p><a class="" href="{% url 'monitor:add_layer' %}">+ Adicionar</a></p>
         <div class=""> 
             <table class="js-dynamitable table table-bordered" id="tablelayer">
                 <thead>
@@ -32,7 +32,7 @@
     </div>
     <div class="controlPoint">
         <h1>Pontos de controle</h1>
-        <p><a class="" href="{% url 'monitor:index' %}">+ Adicionar</a></p>
+        <p><a class="" href="{% url 'monitor:add_controlpoint' %}">+ Adicionar</a></p>
         <div class="table-responsive"> 
             <table class="js-dynamitable table table-bordered" id="tablecontrolpoint">
                 <thead>
@@ -65,7 +65,7 @@
     </div>
     <div class="cam">
         <h1>Câmeras</h1>
-        <p><a class="" href="{% url 'monitor:index' %}">+ Adicionar</a></p>
+        <p><a class="" href="{% url 'monitor:add_camera' %}">+ Adicionar</a></p>
         <div class="table-responsive"> 
             <table class="js-dynamitable table table-bordered" id="tablecam">
                 <thead>

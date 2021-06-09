@@ -1,3 +1,117 @@
-2021-06-08 20:26:12,572---INFO---server.py---HTTP/2 support not enabled (install the http2 and tls Twisted extras)
-2021-06-08 20:26:12,572---INFO---server.py---Configuring endpoint tcp:port=8000:interface=127.0.0.1
-2021-06-08 20:26:12,573---INFO---server.py---Listening on TCP address 127.0.0.1:8000
+2021-06-08 22:29:54,736---INFO---server.py---HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2021-06-08 22:29:54,736---INFO---server.py---Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2021-06-08 22:29:54,737---INFO---server.py---Listening on TCP address 127.0.0.1:8000
+2021-06-08 22:29:57,553---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 47294]
+2021-06-08 22:29:57,645---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 47294]
+2021-06-08 22:29:57,645---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 47294]
+2021-06-08 22:29:57,645---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 47294]
+2021-06-08 22:29:57,645---INFO---runserver.py---[mHTTP GET /add-camera 200 [0.09, 127.0.0.1:47294][0m
+2021-06-08 22:30:35,605---DEBUG---http_protocol.py---HTTP b'POST' request for ['127.0.0.1', 47294]
+2021-06-08 22:30:35,682---ERROR---log.py---Internal Server Error: /add-camera
+Traceback (most recent call last):
+  File "/home/gleison/gteccom-cercainteligente/2.0.1/lib/python3.8/site-packages/asgiref/sync.py", line 330, in thread_handler
+    raise exc_info[1]
+  File "/home/gleison/gteccom-cercainteligente/2.0.1/lib/python3.8/site-packages/django/core/handlers/exception.py", line 38, in inner
+    response = await get_response(request)
+  File "/home/gleison/gteccom-cercainteligente/2.0.1/lib/python3.8/site-packages/django/core/handlers/base.py", line 241, in _get_response_async
+    self.check_response(response, callback)
+  File "/home/gleison/gteccom-cercainteligente/2.0.1/lib/python3.8/site-packages/django/core/handlers/base.py", line 307, in check_response
+    raise ValueError(
+ValueError: The view monitor.views.add_camera didn't return an HttpResponse object. It returned None instead.
+2021-06-08 22:30:35,684---DEBUG---http_protocol.py---HTTP 500 response started for ['127.0.0.1', 47294]
+2021-06-08 22:30:35,684---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 47294]
+2021-06-08 22:30:35,684---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 47294]
+2021-06-08 22:30:35,685---ERROR---runserver.py---[35;1mHTTP POST /add-camera 500 [0.08, 127.0.0.1:47294][0m
+2021-06-08 22:32:07,746---DEBUG---http_protocol.py---HTTP b'POST' request for ['127.0.0.1', 47362]
+2021-06-08 22:32:07,814---DEBUG---http_protocol.py---HTTP 302 response started for ['127.0.0.1', 47362]
+2021-06-08 22:32:07,814---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 47362]
+2021-06-08 22:32:07,814---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 47362]
+2021-06-08 22:32:07,814---INFO---runserver.py---[32mHTTP POST /add-camera 302 [0.07, 127.0.0.1:47362][0m
+2021-06-08 22:32:07,817---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 47362]
+2021-06-08 22:32:07,865---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 47362]
+2021-06-08 22:32:07,866---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 47362]
+2021-06-08 22:32:07,866---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 47362]
+2021-06-08 22:32:07,866---INFO---runserver.py---[mHTTP GET /administracao 200 [0.05, 127.0.0.1:47362][0m
+2021-06-08 22:32:14,904---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 47362]
+2021-06-08 22:32:14,950---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 47362]
+2021-06-08 22:32:14,950---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 47362]
+2021-06-08 22:32:14,951---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 47362]
+2021-06-08 22:32:14,951---INFO---runserver.py---[mHTTP GET /add-camera 200 [0.05, 127.0.0.1:47362][0m
+2021-06-08 22:32:38,358---DEBUG---http_protocol.py---HTTP b'POST' request for ['127.0.0.1', 47362]
+2021-06-08 22:32:38,413---ERROR---log.py---Internal Server Error: /add-camera
+Traceback (most recent call last):
+  File "/home/gleison/gteccom-cercainteligente/2.0.1/lib/python3.8/site-packages/asgiref/sync.py", line 330, in thread_handler
+    raise exc_info[1]
+  File "/home/gleison/gteccom-cercainteligente/2.0.1/lib/python3.8/site-packages/django/core/handlers/exception.py", line 38, in inner
+    response = await get_response(request)
+  File "/home/gleison/gteccom-cercainteligente/2.0.1/lib/python3.8/site-packages/django/core/handlers/base.py", line 241, in _get_response_async
+    self.check_response(response, callback)
+  File "/home/gleison/gteccom-cercainteligente/2.0.1/lib/python3.8/site-packages/django/core/handlers/base.py", line 307, in check_response
+    raise ValueError(
+ValueError: The view monitor.views.add_camera didn't return an HttpResponse object. It returned None instead.
+2021-06-08 22:32:38,415---DEBUG---http_protocol.py---HTTP 500 response started for ['127.0.0.1', 47362]
+2021-06-08 22:32:38,415---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 47362]
+2021-06-08 22:32:38,415---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 47362]
+2021-06-08 22:32:38,415---ERROR---runserver.py---[35;1mHTTP POST /add-camera 500 [0.06, 127.0.0.1:47362][0m
+2021-06-08 22:33:02,725---DEBUG---http_protocol.py---HTTP b'POST' request for ['127.0.0.1', 47362]
+2021-06-08 22:33:02,781---ERROR---log.py---Internal Server Error: /add-camera
+Traceback (most recent call last):
+  File "/home/gleison/gteccom-cercainteligente/2.0.1/lib/python3.8/site-packages/asgiref/sync.py", line 330, in thread_handler
+    raise exc_info[1]
+  File "/home/gleison/gteccom-cercainteligente/2.0.1/lib/python3.8/site-packages/django/core/handlers/exception.py", line 38, in inner
+    response = await get_response(request)
+  File "/home/gleison/gteccom-cercainteligente/2.0.1/lib/python3.8/site-packages/django/core/handlers/base.py", line 241, in _get_response_async
+    self.check_response(response, callback)
+  File "/home/gleison/gteccom-cercainteligente/2.0.1/lib/python3.8/site-packages/django/core/handlers/base.py", line 307, in check_response
+    raise ValueError(
+ValueError: The view monitor.views.add_camera didn't return an HttpResponse object. It returned None instead.
+2021-06-08 22:33:02,784---DEBUG---http_protocol.py---HTTP 500 response started for ['127.0.0.1', 47362]
+2021-06-08 22:33:02,785---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 47362]
+2021-06-08 22:33:02,785---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 47362]
+2021-06-08 22:33:02,785---ERROR---runserver.py---[35;1mHTTP POST /add-camera 500 [0.06, 127.0.0.1:47362][0m
+2021-06-08 22:33:16,536---DEBUG---http_protocol.py---HTTP b'POST' request for ['127.0.0.1', 47362]
+2021-06-08 22:33:16,567---DEBUG---http_protocol.py---HTTP 302 response started for ['127.0.0.1', 47362]
+2021-06-08 22:33:16,567---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 47362]
+2021-06-08 22:33:16,567---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 47362]
+2021-06-08 22:33:16,567---INFO---runserver.py---[32mHTTP POST /add-camera 302 [0.03, 127.0.0.1:47362][0m
+2021-06-08 22:33:16,570---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 47362]
+2021-06-08 22:33:16,619---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 47362]
+2021-06-08 22:33:16,619---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 47362]
+2021-06-08 22:33:16,620---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 47362]
+2021-06-08 22:33:16,620---INFO---runserver.py---[mHTTP GET /administracao 200 [0.05, 127.0.0.1:47362][0m
+2021-06-08 22:33:28,841---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 47362]
+2021-06-08 22:33:28,910---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 47362]
+2021-06-08 22:33:28,911---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 47362]
+2021-06-08 22:33:28,911---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 47362]
+2021-06-08 22:33:28,911---INFO---runserver.py---[mHTTP GET /administracao 200 [0.07, 127.0.0.1:47362][0m
+2021-06-08 22:33:46,468---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 47362]
+2021-06-08 22:33:46,551---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 47362]
+2021-06-08 22:33:46,551---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 47362]
+2021-06-08 22:33:46,551---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 47362]
+2021-06-08 22:33:46,552---INFO---runserver.py---[mHTTP GET /add-camera 200 [0.08, 127.0.0.1:47362][0m
+2021-06-08 22:34:05,743---DEBUG---http_protocol.py---HTTP b'POST' request for ['127.0.0.1', 47362]
+2021-06-08 22:34:05,795---ERROR---log.py---Internal Server Error: /add-camera
+Traceback (most recent call last):
+  File "/home/gleison/gteccom-cercainteligente/2.0.1/lib/python3.8/site-packages/asgiref/sync.py", line 330, in thread_handler
+    raise exc_info[1]
+  File "/home/gleison/gteccom-cercainteligente/2.0.1/lib/python3.8/site-packages/django/core/handlers/exception.py", line 38, in inner
+    response = await get_response(request)
+  File "/home/gleison/gteccom-cercainteligente/2.0.1/lib/python3.8/site-packages/django/core/handlers/base.py", line 241, in _get_response_async
+    self.check_response(response, callback)
+  File "/home/gleison/gteccom-cercainteligente/2.0.1/lib/python3.8/site-packages/django/core/handlers/base.py", line 307, in check_response
+    raise ValueError(
+ValueError: The view monitor.views.add_camera didn't return an HttpResponse object. It returned None instead.
+2021-06-08 22:34:05,797---DEBUG---http_protocol.py---HTTP 500 response started for ['127.0.0.1', 47362]
+2021-06-08 22:34:05,798---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 47362]
+2021-06-08 22:34:05,798---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 47362]
+2021-06-08 22:34:05,798---ERROR---runserver.py---[35;1mHTTP POST /add-camera 500 [0.05, 127.0.0.1:47362][0m
+2021-06-08 22:35:15,546---DEBUG---http_protocol.py---HTTP b'POST' request for ['127.0.0.1', 47416]
+2021-06-08 22:35:15,575---DEBUG---http_protocol.py---HTTP 302 response started for ['127.0.0.1', 47416]
+2021-06-08 22:35:15,575---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 47416]
+2021-06-08 22:35:15,575---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 47416]
+2021-06-08 22:35:15,575---INFO---runserver.py---[32mHTTP POST /add-camera 302 [0.03, 127.0.0.1:47416][0m
+2021-06-08 22:35:15,579---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 47416]
+2021-06-08 22:35:15,631---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 47416]
+2021-06-08 22:35:15,631---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 47416]
+2021-06-08 22:35:15,632---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 47416]
+2021-06-08 22:35:15,632---INFO---runserver.py---[mHTTP GET /administracao 200 [0.05, 127.0.0.1:47416][0m
