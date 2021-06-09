@@ -1,3 +1,5 @@
+
+/***********CABEÇALHO***********/
 .marcas{
     margin-top: -17px;
     height: 90px;
@@ -10,15 +12,27 @@
     width: 12%; 
     margin-top: 23px;
     margin-left: 5px; 
+    
 }
 
 .marca{
     position: absolute;
     margin-top: 23px;
     margin-left: 42%; 
-    color: rgb(253, 255, 250);
+    color: rgb(255, 255, 250);
     font-weight: bolder;
     font-size: 32pt;
+    
+}
+
+.user{
+    position: absolute;
+    font-size: 14pt;
+    color: rgb(255, 255, 250);;
+    text-align: center;
+    margin-left: 91%;
+    margin-top: 30px;
+    margin-bottom: 0px;
 }
 
 .naveg{
@@ -32,7 +46,7 @@
 
 .naveg-nav{
     list-style: none;
-    margin-left: 33%;
+    margin-left: 27%;
     color: #0a1649;
     margin-top: 3px;
     

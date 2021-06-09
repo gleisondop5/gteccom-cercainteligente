@@ -17,9 +17,10 @@
         <nav class="marcas">
             <div>
                 <img class="logo" src="{% static 'images/logo-uff.png' %}">
-                <h1 class="marca">Monitora UFF</h1>
-                
+                <h1 class="marca">Monitora UFF</h1> 
+                <h2 class="user">Bem vindo, {{ user.get_username }}</h2>               
             </div>
+           
             <div class="naveg">
                 <ul class="naveg-nav">
                     <li class="naveg-item">
