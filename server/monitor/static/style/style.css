@@ -141,6 +141,12 @@
     padding-top: 10px;
 }
 
-.add{
-    
+/********MESSAGES**********/
+
+ul.messages{
+        padding: 0;
+}
+
+ul.messages li{
+    list-style: none;
 }

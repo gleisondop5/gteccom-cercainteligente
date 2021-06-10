@@ -5,6 +5,13 @@
 
 {% block content %}
 <main class="admin">
+    {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li {% if message.tags %}class="alert alert-{{message.tags}}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
     <div class="layer">
         <h1>Layer</h1>
         <p><a class="" href="{% url 'monitor:add_layer' %}">+ Adicionar</a></p>
@@ -16,14 +23,13 @@
                         <th>Editar</th>
                         <th>Excluir</th>
                     </tr>
-                
                 </thead>
                 <tbody>
                     <tr>
                         {% for layer in layer_list %}
                                 <td>{{ layer.name }}</td>
-                                <td><img class="editar" src="{% static 'images/editar.png' %}"></td>
-                                <td><img class="del" src="{% static 'images/del.png' %}"></td>
+                                <td><a class="" href="{% url 'monitor:update_layer' layer.id %}"><img class="editar" src="{% static 'images/editar.png' %}"></a></td>
+                                <td><a class="" href="{% url 'monitor:delete_layer' layer.id %}"><img class="del" src="{% static 'images/del.png' %}"></a></td>
                                 </tr>
                         {% endfor %}</tr>
                 </tbody>
@@ -45,7 +51,6 @@
                         <th>Editar</th>
                         <th>Excluir</th>
                     </tr>
-                
                 </thead>
                 <tbody>
                     <tr>
@@ -55,8 +60,8 @@
                                 <td>{{ controlpoint.latitude }}</td>
                                 <td>{{ controlpoint.longitude }}</td>
                                 <td>{{ controlpoint.layer }}</td>
-                                <td><img class="editar" src="{% static 'images/editar.png' %}"></td>
-                                <td><img class="del" src="{% static 'images/del.png' %}"></td>
+                                <td><a class="" href="{% url 'monitor:update_controlpoint' controlpoint.id %}"><img class="editar" src="{% static 'images/editar.png' %}"></a></td>
+                                <td><a class="" href="{% url 'monitor:delete_controlpoint' controlpoint.id %}"><img class="del" src="{% static 'images/del.png' %}"></a></td>
                                 </tr>
                         {% endfor %}</tr>
                 </tbody>
@@ -80,7 +85,6 @@
                         <th>Editar</th>
                         <th>Excluir</th>
                     </tr>
-                
                 </thead>
                 <tbody>
                     <tr>
@@ -92,8 +96,8 @@
                                 <td>{{ camera.agent_user }}</td>
                                 <td>{{ camera.agent_server }}</td>
                                 <td>{{ camera.controlpoint }}</td>
-                                <td><img class="editar" src="{% static 'images/editar.png' %}"></td>
-                                <td><img class="del" src="{% static 'images/del.png' %}"></td>
+                                <td><a class="" href="{% url 'monitor:update_camera' camera.id %}"><img class="editar" src="{% static 'images/editar.png' %}"></a></td>
+                                <td><a class="" href="{% url 'monitor:delete_camera' camera.id %}"><img class="del" src="{% static 'images/del.png' %}"></a></td>
                                 </tr>
                         {% endfor %}</tr>
                 </tbody>

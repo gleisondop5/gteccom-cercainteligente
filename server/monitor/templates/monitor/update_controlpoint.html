@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% load l10n %}
+{% block title %}Monitora UFF{% endblock %}
+
+{% block content %}
+<main class="home">
+    <div class="offset-1 col-10 list-div">
+        <h1>Editar Layer</h1>
+    <form method="POST">
+        
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <input type="submit" value="Salvar" class="btn btn-success">
+    </form>
+    </div>
+    
+</main>
+
+{% endblock %}

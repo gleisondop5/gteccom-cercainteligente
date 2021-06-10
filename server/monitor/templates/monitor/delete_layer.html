@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% load l10n %}
+{% block title %}Monitora UFF{% endblock %}
+
+{% block content %}
+<main class="home">
+    <div class="offset-1 col-10 list-div">
+        <h1>Você tem certeza disso?</h1>
+        <p>Esta ação é irrevessível e implicará na exclusão dos seguintes dados:</p>
+
+        <div class="table-responsive"> 
+            <h2>Layer:</h2>
+            <p>{{ layer.name }}</p>
+            
+            <h2>Ponto de controle:</h2>
+            <table class="js-dynamitable table table-bordered" id="tablecontrolpoint">
+                <thead>
+                    <tr>
+                        <th>Ponto de controle</th>
+                        <th>Endereço</th>
+                        <th>Latitude</th>
+                        <th>Longitude</th>
+                    </tr>
+                
+                </thead>
+                <tbody>
+                    <tr>
+                        {% for controlpoint in controlpoint_list %}
+                                <td>{{ controlpoint.name }}</td>
+                                <td>{{ controlpoint.address }}</td>
+                                <td>{{ controlpoint.latitude }}</td>
+                                <td>{{ controlpoint.longitude }}</td>
+                    </tr>
+                        {% endfor %}
+                </tbody>
+            </table>
+
+            <h2>Câmeras:</h2>
+            <table class="js-dynamitable table table-bordered" id="tablecontrolpoint">
+                <thead>
+                    <tr>
+                        <th>Câmera</th>
+                        <th>Direção</th>
+                        <th>Modelo</th>
+                        <th>Endereço RSTP</th>
+                        <th>Agent_user</th>
+                        <th>Agent_server</th>
+                    </tr>
+                
+                </thead>
+                <tbody>
+                    <tr>
+                        {% for camera in camera_list %}
+                                <td>{{ camera.tag_slug }}</td>
+                                <td>{{ camera.direction }}</td>
+                                <td>{{ camera.model }}</td>
+                                <td>{{ camera.rtsp_url }}</td>
+                                <td>{{ camera.agent_user }}</td>
+                                <td>{{ camera.agent_server }}</td>
+                    </tr>
+                        {% endfor %}
+                </tbody>
+            </table>
+            
+            <h2>Placas:</h2>
+            <table class="js-dynamitable table table-bordered" id="tablecontrolpoint">
+                <thead>
+                    <tr>
+                        <th>Placa</th>
+                        <th>Data e hora</th>
+                        <th>Nome do arquivo</th>
+                        <th>Senha do arquivo RSTP</th>
+                        <th>MD5</th>
+                    </tr>
+                
+                </thead>
+                <tbody>
+                    <tr>
+                        {% for placa in placa_list %}
+                                <td>{{ placa.license_plate }}</td>
+                                <td>{{ placa.detection_date }}</td>
+                                <td>{{ placa.data_filename }}</td>
+                                <td>{{ placa.data_password }}</td>
+                                <td>{{ placa.data_md5 }}</td>
+                    </tr>
+                        {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <form method="POST">
+            
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            <input type="submit" value="Excluir" class="btn btn-success">
+        </form>
+    </div>
+    
+</main>
+
+{% endblock %}
