@@ -5,9 +5,21 @@
 {% block title %}Monitora UFF{% endblock %}
 
 {% block content %}
+    
+
+    {% if messages %}
+        <ul calss = "msg_erro">
+            {% for message in messages %}
+                <li {% if message.tags %}class="erro"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    
+
+
 <main class="home">
+    <h1>Adicionar Câmera</h1>
     <div class="offset-1 col-10 list-div">
-        <h1>Adicionar Câmera</h1>
     <form method="POST">
         
         {% csrf_token %}
@@ -16,7 +28,6 @@
         <input type="submit" value="Salvar" class="btn btn-success">
     </form>
     </div>
-    
 </main>
 
 {% endblock %}

@@ -89,7 +89,8 @@
                                 <td>{{ placa.longitude }}</td>
                                 <td>{{ placa.tag_slug }}</td>
                                 <td>{{ placa.direction }}</td>
-                                <td>{{ placa.license_plate }}</td>
+                                <td>{{ placa.license_plate }}<a class="" href="{% url 'monitor:placa' placa.placa_id %}"><img class="maisInfo" src="{% static 'images/mais_info.png' %}"></a>
+                                </td>
                                 <td>{{ placa.detection_date }}</td>
                                 </tr>
                         {% endfor %}</tr>

@@ -37,12 +37,24 @@ def monitor(request):
 
 def placaListView(request):
     
-    placa_list = Camera.objects.raw('SELECT layer.name as layer, controlpoint.name, controlpoint.address, controlpoint.latitude, controlpoint.longitude, camera.tag_slug, camera.direction, camera.ID, placa.license_plate, placa.detection_date ' 
+    placa_list = Camera.objects.raw('SELECT layer.name as layer, controlpoint.name, controlpoint.address, controlpoint.latitude, controlpoint.longitude, camera.tag_slug, camera.direction, camera.ID, placa.license_plate, placa.detection_date, placa.id as placa_id ' 
                             'FROM monitor_layer as layer, monitor_controlpoint as controlpoint, monitor_camera as camera, monitor_detectedlicenseplate as placa ' 
                             'WHERE layer.id = controlpoint.layer_id and controlpoint.id = camera.controlpoint_id and camera.id = placa.camera_id')
     
     context = {'placa_list': placa_list}
     return render(request, "monitor/placaList.html", context)
+
+def placaView(request, id):
+    placa = get_object_or_404(DetectedLicensePlate, pk=id)
+    placa_list = DetectedLicensePlate.objects.filter(license_plate=placa.license_plate)
+    placa_list = DetectedLicensePlate.objects.raw('SELECT layer.name as layer, controlpoint.address, controlpoint.latitude, controlpoint.longitude, camera.direction, placa.detection_date, placa.ID ' 
+                                    'FROM monitor_layer as layer, monitor_controlpoint as controlpoint, monitor_camera as camera, monitor_detectedlicenseplate as placa ' 
+                                    'WHERE layer.id = controlpoint.layer_id and controlpoint.id = camera.controlpoint_id and camera.id = placa.camera_id and placa. id = %s', [id])
+    context = { 
+        'placa': placa,
+        'placa_list': placa_list
+    }
+    return render(request, "monitor/placa.html", context)
 
 
 def admin(request):
@@ -88,7 +100,7 @@ def add_camera(request):
             camera.save()
             return redirect('/administracao')
         else:
-            return redirect('/erro')
+            return render(request, 'monitor/add_camera.html', {'form': form})
     else:    
         form = CameraForm()
         return render(request, "monitor/add_camera.html", {'form': form})
@@ -218,37 +230,4 @@ def agent_start(request, tag_slug):
         return JsonResponse({'success': False, 'error': str(error)})
 
 
-living_streams = dict()
 
-
-class VideoCamera():
-    def __init__(self):
-        #self.video = cv2.VideoCapture("rtsp://192.168.1.7:8085/h264_ulaw.sdp")
-        self.video = cv2.VideoCapture(0)
-
-    def __del__(self):
-        self.video.release()
-
-    def get_frame(self):
-        success,imgNp = self.video.read()
-        resize = cv2.resize(imgNp, (640, 480), interpolation = cv2.INTER_LINEAR) 
-        ret, jpeg = cv2.imencode('.jpg', resize)
-        return jpeg.tobytes()
-
-def _stream_gen(video):
-    while True:
-        frame = VideoCamera.get_frame(video)
-        yield (b'--frame\r\n'b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
-
-
-def camera_stream_open(request, tag_slug, monitor_id):
-    return StreamingHttpResponse(_stream_gen(VideoCamera()), content_type='multipart/x-mixed-replace; boundary=frame')
-        
-
-def camera_stream_keep_alive(request, tag_slug, monitor_id):
-    key = (tag_slug, monitor_id)
-    if key in living_streams: 
-        living_streams[key] = time.time()
-        return JsonResponse({'success': True})
-    else:
-        return JsonResponse({'success': False})

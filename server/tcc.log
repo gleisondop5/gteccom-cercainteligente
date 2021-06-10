@@ -1,13 +1,23 @@
-2021-06-10 15:21:25,248---INFO---server.py---HTTP/2 support not enabled (install the http2 and tls Twisted extras)
-2021-06-10 15:21:25,249---INFO---server.py---Configuring endpoint tcp:port=8000:interface=127.0.0.1
-2021-06-10 15:21:25,249---INFO---server.py---Listening on TCP address 127.0.0.1:8000
-2021-06-10 15:21:43,824---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 59878]
-2021-06-10 15:21:43,912---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 59878]
-2021-06-10 15:21:43,912---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 59878]
-2021-06-10 15:21:43,912---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 59878]
-2021-06-10 15:21:43,912---INFO---runserver.py---[mHTTP GET /delete-camera/48 200 [0.09, 127.0.0.1:59878][0m
-2021-06-10 15:21:53,581---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 59878]
-2021-06-10 15:21:53,619---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 59878]
-2021-06-10 15:21:53,619---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 59878]
-2021-06-10 15:21:53,619---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 59878]
-2021-06-10 15:21:53,619---INFO---runserver.py---[mHTTP GET /delete-camera/42 200 [0.04, 127.0.0.1:59878][0m
+2021-06-10 19:43:59,698---INFO---server.py---HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2021-06-10 19:43:59,698---INFO---server.py---Configuring endpoint tcp:port=8000:interface=127.0.0.1
+2021-06-10 19:43:59,699---INFO---server.py---Listening on TCP address 127.0.0.1:8000
+2021-06-10 19:43:59,829---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 37216]
+2021-06-10 19:43:59,980---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 37216]
+2021-06-10 19:43:59,980---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 37216]
+2021-06-10 19:43:59,981---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 37216]
+2021-06-10 19:43:59,981---INFO---runserver.py---[mHTTP GET /placa/4811 200 [0.15, 127.0.0.1:37216][0m
+2021-06-10 19:44:00,009---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 37216]
+2021-06-10 19:44:00,012---DEBUG---http_protocol.py---HTTP 304 response started for ['127.0.0.1', 37216]
+2021-06-10 19:44:00,014---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 37216]
+2021-06-10 19:44:00,014---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 37216]
+2021-06-10 19:44:00,014---INFO---runserver.py---[36mHTTP GET /static/style/style.css 304 [0.01, 127.0.0.1:37216][0m
+2021-06-10 19:45:42,324---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 37266]
+2021-06-10 19:45:42,380---DEBUG---http_protocol.py---HTTP 200 response started for ['127.0.0.1', 37266]
+2021-06-10 19:45:42,380---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 37266]
+2021-06-10 19:45:42,381---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 37266]
+2021-06-10 19:45:42,381---INFO---runserver.py---[mHTTP GET /placa/4811 200 [0.06, 127.0.0.1:37266][0m
+2021-06-10 19:45:42,418---DEBUG---http_protocol.py---HTTP b'GET' request for ['127.0.0.1', 37266]
+2021-06-10 19:45:42,420---DEBUG---http_protocol.py---HTTP 304 response started for ['127.0.0.1', 37266]
+2021-06-10 19:45:42,423---DEBUG---http_protocol.py---HTTP close for ['127.0.0.1', 37266]
+2021-06-10 19:45:42,423---DEBUG---http_protocol.py---HTTP response complete for ['127.0.0.1', 37266]
+2021-06-10 19:45:42,423---INFO---runserver.py---[36mHTTP GET /static/style/style.css 304 [0.01, 127.0.0.1:37266][0m

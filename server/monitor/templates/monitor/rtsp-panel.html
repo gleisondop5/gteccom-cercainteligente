@@ -45,14 +45,4 @@
             {% endfor %}
         </table>
     </body>
-    <script type="text/javascript">
-        setInterval(function() {
-            var xhr
-            {% for camera in camera_list %}
-            xhr = new XMLHttpRequest();
-            xhr.open("GET", "../../../camera/{{ camera.tag_slug }}/stream/keep-alive/{{ monitor_id }}", true);
-            xhr.send();
-            {% endfor %}
-        }, 2000)
-    </script>
 </html>
